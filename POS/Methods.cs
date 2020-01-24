@@ -105,32 +105,31 @@ return arr1.toString();
         {
             
             string newscript = @"var logarr= []; $.ajax({
-data: {'username':'" + val[0] + @"','password':'" + val[1] + @"'},
-method: 'POST',
-url:'http://develop.aipsoft.in/common/sync_table/login_action',
-success: function(response) {
- var str= JSON.stringify(response);
-logarr=str;
-console.log(response,str);
-var arr=[str];
-return arr.toString(); 
-},
-error: function(error) {
+            data: {'username':'" + val[0] + @"','password':'" + val[1] + @"'},
+            method: 'POST',
+            url:'http://develop.aipsoft.in/common/sync_table/login_action',
+            success: function(response) {
+            response = JSON.parse(response);
+            console.log(response);
+            var arr=[response];
+            return arr.toString();
+            },
+            error: function(error) {
+ 
+            },
+            beforeSend: function() {
 
-},
-beforeSend: function() {
+            },
+            complete: function() {
 
-},
-complete: function() {
-
-}
-});";
+            }
+            });";
             if (Cbrowser.CanExecuteJavascriptInMainFrame && newscript != null)
             {
                 JavascriptResponse rep = await Cbrowser.EvaluateScriptAsync(newscript);
                 if (rep.Success == true)
                 {
-                    if (rep.Result != null)
+                    if (rep.Result.ToString() != null)
                     {
          
                     }
