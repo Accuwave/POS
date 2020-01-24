@@ -9,8 +9,8 @@ namespace POS
     {
         #region variables
         readonly string conn = @"Server=localhost;Database=record;Uid=root;Pwd=root;";        
-        readonly string cn= @"Data Source=198.24.149.108;Initial Catalog = db_daycartonline; Persist Security Info=True;User ID = user_daycart; Password=Foq11$8r";
-        readonly string c = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\userpc\source\repos\POS\POS\NewData.mdf;Integrated Security=True";
+        //readonly string cn= @"Data Source=198.24.149.108;Initial Catalog = db_daycartonline; Persist Security Info=True;User ID = user_daycart; Password=Foq11$8r";
+        //readonly string c = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\userpc\source\repos\POS\POS\NewData.mdf;Integrated Security=True";
         #endregion
 
         public void InsertData(string[] data)

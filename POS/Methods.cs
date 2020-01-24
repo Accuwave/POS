@@ -16,7 +16,7 @@ namespace POS
         #region Methods
         public async void Login(ChromiumWebBrowser Cbrowser)
         { 
-            if (Cbrowser.Address == @"file:///D:/dll/POS/register.html")
+           /* if (Cbrowser.Address == @"file:///D:/dll/POS/register.html")
             {
                 string setdata = @"(function Update(){
 	                     var arr=[$('#txtcomid').val(),
@@ -39,7 +39,7 @@ namespace POS
                             if (_objDt.Rows.Count == 0)
                             {
                                 _objSql.InsertData(name);
-                                Cbrowser.Load(@"file:///D:/dll/POS/downlode.html");
+                                Cbrowser.Load(@"file:///D:/dll/POS/signin.html");
                             }
                             else
                             {
@@ -53,13 +53,19 @@ namespace POS
                         MessageBox.Show(rep.Message);
                     }
                 }
-            }
+            }*/
             if (Cbrowser.Address == @"file:///D:/dll/POS/signin.html")
             {
                 string logcheck = @"(function Log(){
 	                     var arr1=[$('#txtemail').val(),
-                                   $('#txtpwd').val()];	
-	                        return arr1.toString();})();";
+                                   $('#txtpwd').val()];
+                        var username1 = $('#txtemail').val();
+                        var password1 = $('#txtpwd').val();
+
+alert(password1);
+ 
+return arr1.toString();
+})();";
                 if (Cbrowser.CanExecuteJavascriptInMainFrame && logcheck != null)
                 {
                     JavascriptResponse rep2 = await Cbrowser.EvaluateScriptAsync(logcheck);
@@ -71,7 +77,10 @@ namespace POS
                             _objSql.CheckUser(val, _objDt);
                             if (_objDt.Rows.Count != 0)
                             {
-                                Cbrowser.Load(@"file:///D:/dll/POS/downlode.html");
+                                // Cbrowser.Load(@"file:///D:/dll/POS/downlode.html");
+                                // Cbrowser.Load("http://develop.aipsoft.in/common/sync_table/login_action");
+                             
+                                Redirect(Cbrowser, val);
                             }
                             else
                             {
@@ -80,7 +89,7 @@ namespace POS
                         }
                         else
                         {
-                            //MessageBox.Show(@"Couldn't Load Requested Resource......!");
+                               // MessageBox.Show(@"Couldn't Load Requested Resource......!");
                         }
                     }
                     else
@@ -88,6 +97,52 @@ namespace POS
                         MessageBox.Show(rep2.Message);
                     }
                 }
+            }
+           
+        }
+
+        public async void Redirect(ChromiumWebBrowser Cbrowser,string [] val)
+        {
+            
+            string newscript = @"var logarr= []; $.ajax({
+data: {'username':'" + val[0] + @"','password':'" + val[1] + @"'},
+method: 'POST',
+url:'http://develop.aipsoft.in/common/sync_table/login_action',
+success: function(response) {
+ var str= JSON.stringify(response);
+logarr=str;
+console.log(response,str);
+var arr=[str];
+return arr.toString(); 
+},
+error: function(error) {
+
+},
+beforeSend: function() {
+
+},
+complete: function() {
+
+}
+});";
+            if (Cbrowser.CanExecuteJavascriptInMainFrame && newscript != null)
+            {
+                JavascriptResponse rep = await Cbrowser.EvaluateScriptAsync(newscript);
+                if (rep.Success == true)
+                {
+                    if (rep.Result != null)
+                    {
+         
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(rep.Message);
+                }
+            }
+            else
+            {
+
             }
         }
         #endregion
