@@ -57,15 +57,13 @@ namespace POS
             if (Cbrowser.Address == @"file:///D:/dll/POS/signin.html")
             {
                 string logcheck = @"(function Log(){
-	                     var arr1=[$('#txtemail').val(),
+	                               var arr1=[$('#txtemail').val(),
                                    $('#txtpwd').val()];
-                        var username1 = $('#txtemail').val();
-                        var password1 = $('#txtpwd').val();
-
-alert(password1);
- 
-return arr1.toString();
-})();";
+                                   var username1 = $('#txtemail').val();
+                                   var password1 = $('#txtpwd').val();
+                                   alert(password1);
+                                   return arr1.toString();
+                                   })();";
                 if (Cbrowser.CanExecuteJavascriptInMainFrame && logcheck != null)
                 {
                     JavascriptResponse rep2 = await Cbrowser.EvaluateScriptAsync(logcheck);
@@ -98,22 +96,23 @@ return arr1.toString();
                     }
                 }
             }
-           
         }
 
         public async void Redirect(ChromiumWebBrowser Cbrowser,string [] val)
         {
-            
-            string newscript = @"var logarr= []; $.ajax({
+            string newscript = @"var responseobj;
+            $.ajax({
             data: {'username':'" + val[0] + @"','password':'" + val[1] + @"'},
             method: 'POST',
             url:'http://develop.aipsoft.in/common/sync_table/login_action',
             success: function(response) {
-            response = JSON.parse(response);
-            console.log(response);
-            var arr=[response];
-            return arr.toString();
+            responseobj = JSON.parse(response);
+            console.log(responseobj);
+            alert(responseobj);           
+            responseobj = 1;
+            return response.toString();
             },
+            
             error: function(error) {
  
             },
@@ -124,6 +123,7 @@ return arr1.toString();
 
             }
             });";
+
             if (Cbrowser.CanExecuteJavascriptInMainFrame && newscript != null)
             {
                 JavascriptResponse rep = await Cbrowser.EvaluateScriptAsync(newscript);
@@ -131,7 +131,7 @@ return arr1.toString();
                 {
                     if (rep.Result.ToString() != null)
                     {
-         
+                       
                     }
                 }
                 else

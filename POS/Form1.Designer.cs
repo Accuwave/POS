@@ -33,6 +33,7 @@
             this.ShowDevTools = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BACK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,11 +70,22 @@
             this.textBox1.Size = new System.Drawing.Size(646, 20);
             this.textBox1.TabIndex = 2;
             // 
+            // BACK
+            // 
+            this.BACK.Location = new System.Drawing.Point(874, 22);
+            this.BACK.Name = "BACK";
+            this.BACK.Size = new System.Drawing.Size(91, 23);
+            this.BACK.TabIndex = 3;
+            this.BACK.Text = "BACK";
+            this.BACK.UseVisualStyleBackColor = true;
+            this.BACK.Click += new System.EventHandler(this.BACK_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 814);
+            this.Controls.Add(this.BACK);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.ShowDevTools);
@@ -92,6 +104,7 @@
         private System.Windows.Forms.Button ShowDevTools;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BACK;
     }
 }
 

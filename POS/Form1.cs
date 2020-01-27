@@ -50,6 +50,12 @@ namespace POS
         {
             Cbrowser.ShowDevTools();
         }
+        
+
+        private void BACK_Click(object sender, EventArgs e)
+        {
+            Cbrowser.Back();
+        }
         #endregion
     }
 }
