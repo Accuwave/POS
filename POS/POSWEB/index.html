@@ -1,0 +1,4063 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>POS Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome-animation.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/jkeyboard.css">
+	<link rel="stylesheet" type="text/css" type="text/css" href="css/bootstrap-timepicker.min.css" />
+	<link rel="stylesheet" type="text/css" type="text/css" href="css/bootstrap-glyphicons.min.css" />
+	<link href="css/enjoyhint.css" rel="stylesheet">
+	<!-- <link href="css/style-2.css" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top theam1_navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">
+					<img src="images/logo.png" style="float: left;">
+					<p>Aipsoft | Hello World</p>
+				</a>
+			</div>
+			<div class="nav_datetime">
+				<h5>10:50</h5>  <span>30-09-2019</span> 
+			</div>
+	        <div class="pull-right">
+	            <ul class="nav">
+	                <li class="dropdown user_dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	                	<img class="user_img" src="http://secondcupae.com/assets/dashboard/images/avatar.png" alt="">
+	                	<span class="login_user_name">Althaf</span><b class="caret"></b></a>
+	                    <ul class="dropdown-menu user_dropdown-menu">
+	                        <li><a href="#"><i class="far fa-address-card userlogin_icon"></i> My Profile</a></li>
+	                        <li><a href="#"><i class="fas fa-cog userlogin_icon"></i> Settings</a></li>
+	                        <li><a href="#"><i class="far fa-question-circle userlogin_icon"></i> Help</a></li>
+	                        <li class="divider"></li>
+	                        <li><a href="#"><i class="fas fa-sign-out-alt userlogin_icon"></i> Logout</a></li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </div>
+		</div>
+	</nav>
+
+	<!-----------------------Dashboard top ---------------------->
+
+	<div class="userlogin_wrp theam1_header">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-sm-8 theam1_header_border">
+					<div class="row">
+						<div class="inputBox col-md-4">
+							<div class="inputText">Invoice No</div>
+							<input type="text" name="" class="input white_input_ripple">
+						</div>
+						<div class="inputBox col-md-4">
+							<div class="inputText">Date</div>
+							<i class="far fa-calendar-alt Date_icon"></i>
+							<input type="text" name="" class="input pos_datepicker white_input_ripple" style="padding-left: 30px;">
+						</div>
+						<div class="inputBox col-md-4">
+							<div class="inputText">Remark</div>
+							<input type="text" name="" class="input white_input_ripple">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row  radio_btn_padd">
+						<div class="col-sm-3">
+							<div class="row">
+								<label class="radio_btn"><span class="radiobtn_name">Walk in</span>
+								<input type="radio" name="radio"> <span class="checkmark"></span> 
+								</label>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="row">
+								<label class="radio_btn"><span class="radiobtn_name">Take Away</span>
+									<input type="radio" name="radio"> <span class="checkmark"></span> 
+								</label>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="row">
+								<label class="radio_btn"><span class="radiobtn_name">Home Delivery</span>
+									<input type="radio" name="radio"> <span class="checkmark"></span> 
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-panel">
+					<dl class="accordion"> <dt><i class="plus-icon"></i></dt> 
+						<dd>
+							<div class="content">
+								<div class="">
+									<div class="col-sm-8 col-md-8 theam1_header_border" style="float: left;">
+										<div class="row">
+											<div class="inputBox col-md-3 ">
+												<div class="inputText">Customer</div>
+												<input type="text" name="" class="input white_input_ripple" placeholder="Mobile No">
+											</div>
+											<div class="inputBox  col-md-3">
+												<input name="" class="input white_input_ripple" placeholder="Name" style="margin-top: 20px;">
+											</div>
+											<div class="inputBox col-md-3">
+												<input name="" class="input white_input_ripple" placeholder="Address" style="margin-top: 20px;">
+											</div>
+											<div class="inputBox col-md-3">
+												<input name="" class="input white_input_ripple" placeholder="Pin" style="margin-top: 20px;">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="">
+												<div class="inputBox col-md-4" style="float: left;">
+													<div class="inputText txt_bottom">Cust Type</div>
+													<!-- <input type="text" name="" class="input white_input_ripple" placeholder="default" style="width: 100%;"> -->
+												    <div class="input-prepend input-append">
+												        <div class="btn-group input white_input_ripple">
+												            <button class="btn dropdown-toggle customeselection" name="recordinput" data-toggle="dropdown">Cust Type
+												            <span class="caret"></span>
+												            </button>
+												            <ul class="dropdown-menu dropdownul">
+												                  <li><a href="#">Defualt</a></li>
+												                  <li><a href="#">Defualt</a></li>
+												                  <li><a href="#">Defualt</a></li>
+												                  <li><a href="#">Defualt</a></li>
+												            </ul>
+												        </div>
+												    </div>
+												</div>											
+												<div class="inputBox col-md-4" style="margin-left: 0px;float: left;">
+													<div class="inputText txt_bottom">Waiter/Delivery</div>
+													<!-- <input type="text" name="" class="input white_input_ripple" placeholder="Admin" style="width: 100%;"> -->
+											        <div class="btn-group input white_input_ripple">
+											            <button class="btn dropdown-toggle customeselection" name="recordinput" data-toggle="dropdown">Waiter/Delivery
+											            <span class="caret"></span>
+											            </button>
+											            <ul class="dropdown-menu dropdownul">
+											                  <li><a href="#">Admim</a></li>
+											                  <li><a href="#">Admim</a></li>
+											                  <li><a href="#">Admim</a></li>
+											                  <li><a href="#">Admim</a></li>
+											            </ul>
+											        </div>
+												</div>
+												<div class="inputBox col-md-4" style="float: left;">
+													<div class="inputText txt_bottom">Depot</div>
+													<!-- <input type="text" name="" class="input white_input_ripple" placeholder="Jahili Store" style="width: 100%;"> -->
+											        <div class="btn-group input white_input_ripple">
+											            <button class="btn dropdown-toggle customeselection" name="recordinput" data-toggle="dropdown">Depot
+											            <span class="caret"></span>
+											            </button>
+											            <ul class="dropdown-menu dropdownul">
+											                  <li><a href="#">Jahili Store</a></li>
+											                  <li><a href="#">abc Store</a></li>
+											                  <li><a href="#">xyz Store</a></li>
+											                  <li><a href="#">Jahili Store</a></li>
+											            </ul>
+											        </div>													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-----------------------content---------------------->
+
+	<div class="content_wrp">
+		<div class="arrow_wrp">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-12">
+					<div class="row">
+						<div class="col-md-12 row">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="vertical-tabs">
+										<div class="">
+											<ul id="tab_scrollbar" class="nav nav-tabs scrollbar" role="tablist">
+												<div class="vertical-tabs_arrow"><i class="fas fa-caret-up faa-float animated-hover touch_arrow"></i></div>
+
+													<li class="nav-item top"> <a class="nav-link theam1_tabcolor active" data-toggle="tab" href="#fastmoving" role="tab" aria-controls="fastmoving"><i class="fas fa-cocktail Juice_category_icon"></i> Fast Moving </a>
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#freshjuice" role="tab" aria-controls="freshjuice">
+														<i class="fas fa-beer Juice_category_icon"></i> Fresh Juices</a> 
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#hotdrink" role="tab" aria-controls="hotdrink"><i class="fas fa-mug-hot Juice_category_icon"></i> Hot Drinks</a> 
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#cooldrinks" role="tab" aria-controls="cooldrinks"><i class="fas fa-wine-glass-alt Juice_category_icon"></i> Cool Drinks</a> 
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#cooldrinks" role="tab" aria-controls="freshjuice"><i class="fas fa-beer Juice_category_icon"></i> Cool Drinks</a> 
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#hotdrink" role="tab" aria-controls="hotdrink"><i class="fas fa-mug-hot Juice_category_icon"></i> Hot Drinks</a> 
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#cooldrinks" role="tab" aria-controls="cooldrinks"><i class="fas fa-wine-glass-alt Juice_category_icon"></i> Cool Drinks</a> 
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#hotdrink" role="tab" aria-controls="hotdrink"><i class="fas fa-mug-hot Juice_category_icon"></i> Hot Drinks</a> 
+													</li>
+													<li class="nav-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#cooldrinks" role="tab" aria-controls="cooldrinks"><i class="fas fa-wine-glass-alt Juice_category_icon"></i> Cool Drinks</a> 
+													</li>
+
+												<div class="vertical-tabs_arrow_btm"><i class="fas fa-caret-down faa-float animated-hover touch_arrow"></i></div>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="row">
+										<div class="tab-content">
+											<div class="top_arrow"><i class="fas fa-caret-up faa-float animated-hover touch_arrow"></i></div>
+											<div class="tab-pane active" id="fastmoving" role="tabpanel">										
+												<div id="panal_scrollbar" class="sv-tab-panel scrollbar">
+													<div id="custom-search-input">
+														<form action="">
+															<input class="search_btn white_input_ripple" type="search" placeholder="Search:" name="search"><span id="item_list">Cold Drinks</span>
+															<!--<button type="submit"><i class="fa fa-search"></i> </button>-->
+														</form>
+													</div>
+													<div class="category_wrp">
+														<div class="row">
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product" data-toggle="modal" data-target="#familymeal">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>
+																	</div>																	
+																</div>
+																<div class="product_title">
+																	<p>mango</p>
+																</div>
+																<div class="count_view">
+																	<span>5</span>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product size-chart">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																	<div class="count_view">
+																		<span>2</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="bottom_arrow"><i class="fas fa-caret-down faa-float animated-hover touch_arrow"></i>
+											</div>
+
+											<!------------------------------------------------------>
+
+											<div class="tab-pane" id="freshjuice" role="tabpanel">
+												<div id="panal_scrollbar" class="sv-tab-panel scrollbar">
+													<div id="custom-search-input">
+														<form action="">
+															<input class="search_btn" type="search" placeholder="Search:" name="search"><span id="item_list">Cold Drinks</span>
+															<!--<button type="submit"><i class="fa fa-search"></i> </button>-->
+														</form>
+													</div>
+													<div class="category_wrp">
+														<div class="row">
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="bottom_arrow"><i class="fas fa-caret-down faa-float animated-hover touch_arrow"></i></div>
+											<!------------------------------------------------------>
+											<div class="tab-pane" id="hotdrink" role="tabpanel">
+												<div id="panal_scrollbar" class="sv-tab-panel scrollbar">
+													<div id="custom-search-input">
+														<form action="">
+															<input class="search_btn" type="search" placeholder="Search:" name="search"><span id="item_list">Cold Drinks</span>
+															<!--<button type="submit"><i class="fa fa-search"></i> </button>-->
+														</form>
+													</div>
+													<div class="category_wrp">
+														<div class="row">
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="bottom_arrow"><i class="fas fa-caret-down faa-float animated-hover touch_arrow"></i></div>
+
+											<!------------------------------------------------------>
+
+											<div class="tab-pane" id="cooldrinks" role="tabpanel">
+												<div id="panal_scrollbar" class="sv-tab-panel scrollbar">
+													<div id="custom-search-input">
+														<form action="">
+															<input class="search_btn" type="search" placeholder="Search:" name="search"><span id="item_list">Cold Drinks</span>
+															<!--<button type="submit"><i class="fa fa-search"></i> </button>-->
+														</form>
+													</div>
+													<div class="category_wrp">
+														<div class="row">
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/mango.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>mango</p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-4 col-lg-4">
+																<div class="row">
+																	<div class="product">
+																		<img class="productimg theam1_border" src="images/apple.jpg">
+																		<div class="prize_overly"> <span class="">AED 10:00</span> 
+																		</div>																	
+																	</div>
+																	<div class="product_title">
+																		<p>Apple</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="bottom_arrow"><i class="fas fa-caret-down faa-float animated-hover touch_arrow"></i></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--------------------------------------->
+				<div class="col-md-5">
+					<div class="Product_form row">
+						<label class="ck_checkbox product_labal theam1_border col-md-1"><input type="checkbox" checked="checked"><span class="quickadd_checkmark" data-toggle="tooltip" data-placement="bottom" title="Quick Add"></span></label>
+						<input id="keyboard_field" type="text" name="" class="product_labal white_input_ripple theam1_border col-md-6" placeholder="Enter or Scan product">
+						<input id="" type="text" name="" class="product_labal white_input_ripple theam1_border col-md-2" placeholder="Qty">
+						<div class="col-md-2 product_labal theam1_border"><label class="switch tab_kot"><input type="checkbox" checked=""> <span class="slider round">KOT</span></label></div>
+
+						<div class="toutch_right_icon"><i class="fas fa-chevron-circle-up icon_top"></i></div>
+						<div id="product_scrollbar" class="scrollbar_right">
+							<div class="col-md-12">
+								<div class="Product_list row theam1_background" style="margin-top: 5px;">
+									<button type="button" class="close_btn" aria-label="Close"><span aria-hidden="true"><i class="far fa-times-circle"></i></span>
+									</button>
+									<div class="col-md-12 row">
+										<h3> 1. Arabic Coffee </h3>
+									</div>
+									<input type="text" name="" class="discription_form black_input_ripple" data-toggle="modal" data-target="#discription" placeholder="Other Discription">
+									<div class="input-group Productlist_numbercount">					
+										<button class="productlist_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+										<input type="text" class="productlist_input black_input_ripple" value="1">
+										<button class="productlist_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+									</div>
+									<input type="" name="" class="amount_count black_input_ripple">
+									<label class="switch">
+										<input type="checkbox" checked> <span class="slider round">KOT</span> 
+									</label>
+								</div>
+								<div class="Product_list row theam1_background">
+									<button type="button" class="close_btn" aria-label="Close"><span aria-hidden="true"><i class="far fa-times-circle"></i></span>
+									</button>
+									<div class="col-md-12 row">
+										<h3> 2. Arabic Coffee </h3>
+									</div>
+									<input type="text" name="" class="discription_form black_input_ripple" placeholder="Other Discription">
+									<input type="" name="" class="amount_count2 black_input_ripple">
+									<div class="input-group Productlist_numbercount">					
+										<button class="productlist_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+										<input type="text" class="productlist_input black_input_ripple" value="1">
+										<button class="productlist_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+									</div>				
+									<input type="" name="" class="amount_count black_input_ripple">
+								</div>
+								<div class="Product_list row theam1_background">
+									<button type="button" class="close_btn" aria-label="Close"><span aria-hidden="true"><i class="far fa-times-circle"></i></span>
+									</button>
+									<div class="col-md-12 row">
+										<h3> 3. Arabic Coffee </h3>
+									</div>
+									<input type="text" name="" class="discription_form black_input_ripple" placeholder="Other Discription">
+									<input type="" name="" class="amount_count2 black_input_ripple">
+									<div class="input-group Productlist_numbercount">					
+										<!-- <button class="productlist_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button> -->
+										<input type="text" class="productlist_input black_input_ripple" value="1">
+										<!-- <button class="productlist_btn_right" data-dir="up"><i class="fas fa-plus"></i></button> -->
+									</div>
+									<input type="" name="" class="amount_count black_input_ripple">
+									<label class="switch">
+										<input type="checkbox" checked> <span class="slider round">KOT</span> 
+									</label>
+								</div>
+								<div class="Product_list row theam1_background">
+									<button type="button" class="close_btn" aria-label="Close"><span aria-hidden="true"><i class="far fa-times-circle"></i></span>
+									</button>
+									<div class="col-md-12 row">
+										<h3> 4. Arabic Coffee </h3>
+									</div>
+									<input type="text" name="" class="discription_form black_input_ripple" placeholder="Other Discription" style="width: 45%;">
+									<input type="" name="" class="amount_count2 black_input_ripple">
+									<div class="input-group Productlist_numbercount">					
+										<!-- <button class="productlist_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button> -->
+										<input type="text" class="productlist_input black_input_ripple" value="1">
+										<!-- <button class="productlist_btn_right" data-dir="up"><i class="fas fa-plus"></i></button> -->
+									</div>
+									<input type="" name="" class="amount_count black_input_ripple">
+<!-- 									<label class="switch">
+										<input type="checkbox" checked> <span class="slider round">KOT</span> 
+									</label> -->
+								</div>
+								<div class="Product_list row theam1_background">
+									<button type="button" class="close_btn" aria-label="Close"><span aria-hidden="true"><i class="far fa-times-circle"></i></span>
+									</button>
+									<div class="col-md-12 row">
+										<h3> 5. Arabic Coffee </h3>
+									</div>
+									<input type="text" name="" class="discription_form black_input_ripple" placeholder="Other Discription">
+									<div class="input-group Productlist_numbercount">					
+										<button class="productlist_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+										<input type="text" class="productlist_input black_input_ripple" value="1">
+										<button class="productlist_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+									</div>
+									<input type="" name="" class="amount_count black_input_ripple">
+									<label class="switch">
+										<input type="checkbox" checked> <span class="slider round">KOT</span> 
+									</label>
+								</div>
+								<div class="Product_list row theam1_background">
+									<button type="button" class="close_btn" aria-label="Close"><span aria-hidden="true"><i class="far fa-times-circle"></i></span>
+									</button>
+									<div class="col-md-12 row">
+										<h3> 6. Arabic Coffee </h3>
+									</div>
+									<input type="text" name="" class="discription_form black_input_ripple" placeholder="Other Discription">
+									<div class="input-group Productlist_numbercount">					
+										<button class="productlist_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+										<input type="text" class="productlist_input black_input_ripple" value="1">
+										<button class="productlist_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+									</div>
+									<input type="" name="" class="amount_count black_input_ripple">
+									<label class="switch">
+										<input type="checkbox" checked> <span class="slider round">KOT</span> 
+									</label>
+								</div>
+							</div>						
+						</div>	
+						<div class="toutch_bottom_icon"><i class="fas fa-chevron-circle-down animated-hover icon_bottom"></i></div>					
+						<hr class="Product_list_hr theam1_border">
+						<div class="row">
+							<div class="acc">
+								<div style="float: left;">
+									<div class="totalprice_width">
+										<div class="fix-width scroll-inner">
+											<ul class="total_price">
+												<li><span>Sub Total</span> <p>12.00</p></li>
+												<li><span>Discount</span> <p>12.00</p></li>
+												<li><span>Vat 20%</span> <p>12.00</p></li>
+											</ul>
+										</div>
+									</div>
+								</div>				
+								<div style="float: left;">
+									<div class="total_wrp">
+										<span>Total</span>
+										<p>1204.00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!------------------------------------>
+
+				<div class="col-md-2">
+					<div class="notification_wrp">
+						<div class="notification_section theam1_border">
+							<h4>Notifications</h4> 
+						</div>
+
+						<div class="notification_icon">
+							<ul>
+								<input class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#iconshow" type="checkbox" id="toggle-menu-2" class="toggle-menu-2" name="">
+								<label for="toggle-menu-2" id="toggle_btn" class="">
+								    <span class="menu-bar-2 theam1_background"></span>
+								    <span class="menu-bar-2 theam1_background"></span>
+								    <span class="menu-bar-2 theam1_background"></span>
+								</label>
+								<li class="search-btn theam1_color" data-toggle="modal" data-target="#search" ><i class="fas fa-search faa-shake animated-hover"></i><p class="icon_name">Search</p></li>
+								
+							</ul>
+						</div>
+
+						<div class="collapse navbar-collapse" id="iconshow">
+							<ul class="open_icon"> 
+								<li  class="theam1_color" data-toggle="modal" data-target="#invoice" style="margin-top: 0;"><i class="fas fa-external-link-alt faa-shake animated-hover"></i><p class="icon_name">Invoice</p></li>
+								<li  class="disabled_icon theam1_color"><i class="far fa-file-alt faa-shake"></i><p class="icon_name">File</p></li>								
+							</ul>
+							<ul class="open_icon">
+								<li  class="theam1_color" data-toggle="modal" data-target="#print" style="margin-top: 0;"><i class="fas fa-print faa-shake animated-hover"></i><p class="icon_name">Print</p></li>
+								<li  class="disabled_icon theam1_color"><i class="fas fa-cog faa-shake"></i><p class="icon_name">Settings</p></li>
+							</ul>							
+							<ul class="open_icon">
+								<li  class="theam1_color" data-toggle="modal" data-target="#delete"><i class="far fa-trash-alt faa-shake animated-hover"></i><p class="icon_name">Delete</p></li>
+								<li  class="theam1_color" data-toggle="modal" data-target="#tabledisplay"><img class="faa-shake animated-hover drop-icon" src="images/drop-icon.png"><p class="icon_name">Table</p></li>								
+							</ul>							
+							<ul class="open_icon">							
+								<li  class="theam1_color" data-toggle="modal" data-target="#discount"><i class="fas fa-percent faa-shake animated-hover"></i><p class="icon_name">Discount</p></li>
+								<li  class="theam1_color" data-toggle="modal" data-target="#price_enquiry"><i class="fas fa-tshirt faa-shake animated-hover"></i><p class="icon_name"> Enquiry</p></li>
+							</ul>
+
+						</div> 
+
+						<div id="buttons_wrap">
+							<button type="button" class="split_btn" data-toggle="modal" data-target="#split">Split <i class="fas fa-exchange-alt faa-passing animated-hover"></i></button>
+							<!-- <button type="button" class="discount_btn">Discount <i class="fas fa-percent"></i> 
+							<input name="number" type="" class="discount_input"> </button> -->
+
+							<button type="button" class="hold_btn disabled_button">Hold <!-- <i class="fas fa-hand-paper faa-pulse"></i> --></button>
+							<button type="button" class="retrive_btn" data-toggle="modal" data-target="#retrive">Retrive <!-- <i class="fas fa-undo-alt faa-spin animated-hover"></i> --></button>
+							
+							<button type="button" class="clear_only" data-toggle="modal" data-target="#clearall">Clear <i class="fas fa-paint-brush faa-shake animated-hover"></i><p class="subtext">Clear All</p></button>
+							<button type="button" class="save_only disabled_button">Save <i class="fas fa-save faa-shake"></i><p class="subtext wo_print">Save Without Print</p></button>
+
+						</div>  
+
+						<button type="button" class="save-print_btn theam1_background" data-toggle="modal" data-target="#save">Save & Print
+							<img src="images/save-printer.png" style="margin-left: 5px;">
+						</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--------------- Payment Modal -------------->
+
+	<div class="modal fade" id="save" role="dialog">
+	    <div class="modal-dialog payment_dialoge">
+	    	<div class="popup-arrow-top "></div>
+	      	<div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		        </div>
+		        <div class="modal-body">
+		          	<div class="timestarts_wrp">
+		          		<p class="timestarts theam1_border">Time Starts</p><span class="time theam1_background">00:50</span>
+		          	</div>
+		          	<div class="elapsetime_wrp">
+		          		<p class="elapsetime theam1_border">Elapse Time</p><span class="time theam1_background">00:00</span>
+		          	</div>		          	
+		        </div>
+
+				<form>
+					  <label class="label_style">
+					    <p class="label-txt">Customer Id</p>
+					    <input type="text" class="input_popup">
+					    <div class="line-box">
+					      <div class="line theam1_background"></div>
+					    </div>
+					  </label>
+					 <label class="label_style">
+					    <p class="label-txt">Customer Mob No</p>
+					    <input type="text" class="input_popup">
+					    <div class="line-box">
+					      <div class="line theam1_background"></div>
+					    </div>
+					  </label>
+					  <label class="label_style">
+					    <p class="label-txt">Customer Id</p>
+					    <input type="text" class="input_popup">
+					    <div class="line-box">
+					      <div class="line theam1_background"></div>
+					    </div>
+					  </label>
+					 <label class="label_style">
+					    <p class="label-txt">Customer Mob No</p>
+					    <input type="text" class="input_popup">
+					    <div class="line-box">
+					      <div class="line theam1_background"></div>
+					    </div>
+					  </label>	
+					 <label class="label_style">
+					    <p class="label-txt">TRN(VAT-TIN)</p>
+					    <input type="text" class="input_popup">
+					    <div class="line-box">
+					      <div class="line theam1_background"></div>
+					    </div>
+					  </label>						  				  
+				</form>
+
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="Payment_list_wrp">					
+							<div class="tabs">
+								<div class="row">																	
+									<div class="col-md-4">
+										<div id="popup_tab" class="scrollbar row">
+											<div class="popupup_arrow_left"><i class="fas fa-caret-up faa-float animated-hover popup_touch_arrow_left"></i></div>
+											<ul class="nav nav-pills nav-stacked flex-column Payment_style" style="padding: 0;width: 100%;">
+
+												<li class="tab-item"><a class="nav-link theam1_tabcolor active" data-toggle="tab" href="#cash" role="tab" aria-controls="cash" aria-selected="true" style="margin-top: 19px;"><img src="images/cash.png"><p>Cash</p><p class="tab_amount">1000.00</p><hr class="tab_border tab1_flash"></a></li>		
+
+												<li class="tab-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#creditcard" role="tab" aria-controls="creditcard"><img src="images/creditcard.png"><p>Credit card </p><p class="tab_amount">1000.00</p><hr class="tab_border tab2_flash"></a></li>
+
+												<li class="tab-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#paymentgateway" role="tab" aria-controls="paymentgateway"><img src="images/paymentgatewat.png"><p>Payment Gateway </p><p class="tab_amount">1000.00</p><hr class="tab_border tab3_flash"></a></li>															
+												<li class="tab-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#mobikwik" role="tab" aria-controls="mobikwik"><img src="images/mobikwik.png"><p>Mobikwik </p><p class="tab_amount">1000.00</p><hr class="tab_border tab4_flash"></a></li>
+
+												<li class="tab-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#googlepay" role="tab" aria-controls="googlepay"><img src="images/googlepay.png"><p>google pay</p><p class="tab_amount">1000.00</p><hr class="tab_border tab5_flash"></a></li>	
+
+												<li class="tab-item"> <a class="nav-link theam1_tabcolor" data-toggle="tab" href="#paypal" role="tab" aria-controls="paypal"><img src="images/paypal.png"><p>Paypal </p><p class="tab_amount">1000.00</p><hr class="tab_border tab6_flash"></a></li>																						
+											</ul>																	
+										</div>
+										<div class="popupup_arrow_left"><i class="fas fa-caret-down faa-float animated-hover popup_touch_arrow_left"></i></div>	
+									</div>
+									<div class="col-md-8 padding_wrp">
+										<div class="tab-content scrollbar" id="Payment_tab">
+											<div class="tab-pane active" id="cash"  role="tabpanel">
+												    <form class="amount-padd">
+													    <label class="amount_label" style="color: #333;">Amount</label>
+													    <input readonly="readonly" id="number_field" type="text" name="firstname" class="amount_input white_input_ripple theam1_border"><img class="amount_edit faa-horizontal animated-hover" src="images/edit.png">
+													</form>
+													<!-- <div class="number_paad_arrow"></div> -->
+													<div id="number"></div>												
+													<div class="row padding_labals">
+														<div class="col-md-6">
+															<div class="row">
+																<img class="tendercash_edit faa-horizontal animated-hover" src="images/edit.png">
+																<input type="text" name="firstname" class="tender_cash white_input_ripple theam1_border">
+																<label class="tendercash_label ">Tender Cash</label>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="row">
+																<input type="text" name="firstname" class="Change_input white_input_ripple theam1_border">
+																<label class="chnage_label">Change</label>
+															</div>
+														</div>
+
+														<button id="signin" type="button" class="denocontent choose_demo_btn theam1_background"><i class="fas fa-check"></i> Choose Denomination</button>
+														<div class="btn_connection"></div>
+														<button type="button" class="cleardemo_btn"><img src="images/clear_icon.png"></button>
+													</div>
+
+        
+
+											</div>
+
+											<!----------cash tab end here --------------------->
+
+											<div  class="tab-pane" id="creditcard" role="tabpanel">
+
+												<div class="creditcard_wrp">
+													<div class="creadit_balaceview">
+														<ul class="creaditcard_model">
+															<p>Card #1</p>
+															<li class="card_image"><img src="images/visa_card.png"><span>XX4215</span></li>						
+															<li class="card_amount">1250.00</li>
+														</ul>
+													</div>
+													<div class="creadit_balaceview">
+														<ul class="creaditcard_model">
+															<p>Card #1</p>
+															<li class="card_image"><img src="images/rupay_card.png"><span>XX1015</span></li>						
+															<li class="card_amount">15850.00</li>
+														</ul>
+													</div>	
+													<form >													
+													    <input type="text" name="amount" class="credit_input white_input_ripple theam1_border" placeholder="Amount">
+													    <p class="Required">Required</p>
+													    <input type="text" name="num" class="credit_input white_input_ripple theam1_border" placeholder="Last 4 Digit">
+													</form>
+													<ul class="card_ul">
+														<li><img src="images/visa-card.png"></li>
+														<li><img src="images/master-card.png"></li>
+														<li><img src="images/discover-card.png"></li>
+														<li><img src="images/mastro-card.png"></li>
+														<li><img src="images/am-card.png"></li>
+														<li><img src="images/paypal-card.png"></li>														
+													</ul>
+
+													<hr class="card_hr theam1_hr">
+													<button type="button" class="card_btn_ok">OK</button>	
+													<button type="button" class="card_btn_clear">Clear</button>
+													<button type="button" class="card_btn_allclear">Clear All Credit</button>
+												</div>
+
+											</div>
+
+											<!----------Creditcard tab end here --------------------->
+
+											<div class="tab-pane" id="paymentgateway" role="tabpanel">
+												<div class="Paymentgateway">
+													<ul class="Payment_model">
+														<p>#1</p>
+														<li><img src="images/cc-avenue.png"></li>
+														<li>Auto Code</li>
+														<li>1250.00</li>
+													</ul>
+												</div>
+												<div class="Paymentgateway">
+													<ul class="Payment_model">
+														<p>#2</p>
+														<li><img src="images/razorpay.png"></li>
+														<li>Auto Code</li>
+														<li>1250.00</li>
+													</ul>
+												</div>	
+												<hr class="card_hr theam1_hr">
+												<form >													
+													<label class="amount_label" style="color: #333;">Amount</label>
+													<input type="text" name="amount" class="credit_input white_input_ripple theam1_border">
+												</form>
+												<ul class="Payment_type">
+													<li><img src="images/cc-avenue-logo.png"></li>
+													<li><img src="images/razorpay-logo.png"></li>
+												</ul>
+
+											</div>
+
+											<div class="tab-pane" id="mobikwik" role="tabpanel">
+												<form class="mobikwik-wrp theam1_border">
+													<div>   
+													    <label class="amount_label">Enter Amount</label>
+													    <input type="text" name="enteramount" class="mobikwik_input white_input_ripple theam1_background">
+													</div>   
+													<div>
+													  	  <label class="amount_label">Enter Mobile Number</label>
+													  	  <input type="num" name="num" class="mobikwik_input white_input_ripple theam1_background">
+													</div>
+													<button type="button" class="mobikwik_ok_btn">Ok</button>
+													<button type="button" class="mobikwik_clearall_btn">Clear All</button>
+												</form>
+											</div>	
+
+											<div class="tab-pane" id="googlepay" role="tabpanel">
+												<h3>Google Pay.</h3>
+											</div>	
+											<div class="tab-pane" id="paypal" role="tabpanel">
+												<h3>Paypal</h3>
+											</div>																														
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="Payment_total theam1_background">
+
+						<div id="form-scrollbar" class="scrollbar">
+	                        <form action="" method="">
+	                            <div class="form-group row">
+	                                <label for="email_address" class="col-md-4 popup_form-label">Total Qty</label>
+	                                <div class="col-md-8">
+	                                    <input type="text" class="popup_form-control white_input_ripple" name="totalqty" required autofocus>
+	                                </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <label for="txt" class="col-md-4 popup_form-label">Total</label>
+	                                <div class="col-md-8">
+	                                    <input type="text" class="popup_form-control white_input_ripple" name="total" required>
+	                                </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <label for="txt" class="col-md-4 popup_form-label">Discount</label>
+										<div class="col-md-8">
+	                                    <img class="faa-horizontal animated-hover discount-edit" email_address="" src="images/edit.png">
+										<input type="text" class="popup_form-control white_input_ripple" name="discount" required="">
+	                                </div>
+	                            </div>	 
+	                            <div class="form-group row">
+	                                <label for="txt" class="col-md-4 popup_form-label">GST 1</label>
+	                                <div class="col-md-8">
+	                                    <input type="text" class="popup_form-control white_input_ripple" name="gst1" required>
+	                                </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <label for="txt" class="col-md-4 popup_form-label">GST 2</label>
+	                                <div class="col-md-8">
+	                                    <input type="text" class="popup_form-control white_input_ripple" name="gst2" required>
+	                                </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <label for="txt" class="col-md-4 popup_form-label white_input_ripple">Paid</label>
+	                                <div class="col-md-8">
+	                                    <input type="text" class="popup_form-control white_input_ripple" name="paid" required>
+	                                </div>
+	                            </div>
+	                        </form>
+	                    </div>
+
+	                        <div class="grand_total popupcontent">
+	                        	<p>Grand Total</p>
+	                        	<hr class="gt_hr theam1_hr">
+	                        	<span id="grandtotal">123456.00 </span><img class="faa-horizontal animated-hover" src="images/grandtotal-edit.png">
+	                        </div>
+
+	                        <div class="current_payment">
+	                        	<p>Cur.Payment</p><span>1000.00</span>
+	                        </div>
+	                        <div class="balance">
+	                        	<p>Balance</p><span>25.00</span>
+	                        </div>
+
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="popupup_arrow_right"><i class="fas fa-caret-up faa-float animated-hover popup_touch_arrow_right"></i></div>
+						<div id="Payment_details" class="done_payment theam1_Payment_details_background">
+							<h5>Recently done payments</h5>
+
+				            <table class="table paymenttable">
+				             	 <tbody>
+					                <tr>
+					                    <td>Cash</td>
+					                    <td>: xxx <p>@12:19 - 11-10-19</p></td>
+					                </tr>
+					                <tr>
+					                    <td>Cradit Card</td>
+					                    <td>: 100.00 <p>@12:59 - 12-10-19</p></td>
+					                </tr>
+					                <tr>
+					                    <td>Cradit Card2</td>
+					                    <td>: 300.00 <p>@12:19 - 11-10-19</p></td>
+					                </tr>
+				            	  </tbody>
+				            </table>
+				            <div class="History_invoice">
+				           		<h5>History of Invoice</h5>
+				            	<p>Invoise Created  with amount of 1250.00 @ 2019*09*11, Admin</p>
+				            	<p>Invoise Created  with amount of 1250.00 @ 2019*09*11, Admin</p>
+				            	<p>Invoise Created  with amount of 1250.00 @ 2019*09*11, Admin</p>
+				       		</div>
+						</div>
+						<div class="popupup_arrow_right"><i class="fas fa-caret-down faa-float animated-hover popup_touch_arrow_right"></i></div>
+					</div>	
+				</div>
+				  <span></span><div class="hr_wrap hr-animation"><hr class="colored"></div>
+				<div class="modal-footer footer_wrp">		
+					<button type="button" class="popup_Close_btn" data-dismiss="modal">Close</button>
+					<button type="button" class="popup_clear_btn">Clear</button>			
+					
+					<button type="button" class="popup_save_btn">Save</button>
+					<button type="button" class="popup_saveprint_btn"><i class="fas fa-print print-fa"></i>Save & Print</button>
+				</div>
+			</div>
+	    </div>
+	</div>
+
+	<!--------------- Payment Modal -------------->
+
+  	<!-------Choose Denomination Modal ----------->
+
+	<div id="denominatio_popup" style="display: none;">
+		<div class="denominatio_content">      
+		      <div class="modal-body">
+		      	<img class="choosedemo_close_btn" data-dismiss="modal" src="images/popup_close-btn.png">
+		      	<div class="row">
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>1000 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>500</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>500 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>1000</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>100 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>100</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>50 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>50</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>20 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>20</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>10 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>10</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>5 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>5</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>2 </h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>2</h3>
+						</div>
+					</div>
+			      	<div class="col-md-9">
+				      	<div class="payment_data_wrp theam1_border">
+				      		<h3>1</h3><span>X</span>
+							<div class="input-group number-spinner">					
+								<button class="number_btn_left theam1_background" data-dir="dwn"><i class="fas fa-minus"></i></button>
+								<input type="text" class="counter_input white_input_ripple theam1_border" value="1">
+								<button class="number_btn_right theam1_background" data-dir="up"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="Payment_count theam1_border">
+							<h3>1</h3>
+						</div>
+					</div>					
+
+				</div>
+		      </div>
+		      <div class="denominatio_footer theam1_hr">
+		      	<button type="button" class=" denominatio_ok_btn">Ok</button>
+		      	<button type="button" class="denominatio_close_btn" data-dismiss="modal">Close</button>
+		      </div>
+	        </form>
+	    </div>
+	  </div>
+
+	<!-------Grand Total popup Modal ----------->
+
+	<div id="grandtotalpopup" class="grandtotal_content grandtotal_arrow" style="display: none;">
+		<div class="modal-body grandtotal_body">
+			<img class="grandtotal_close_btn" src="images/popup_close-btn.png">
+			<img class="login-icon" src="images/login-icon.png">
+			<form>	<i class="far fa-keyboard keyboard_icon"></i>
+				<input type="text" id="password" class="form_password white_input_ripple" name="login" placeholder="Password">
+			</form>
+			<button type="button" class="grandtotal_ok_btn">Ok</button>
+			<button type="button" class="grandtotal_clear_btn">Clear</button>
+		</div>
+	</div>
+
+	<!--------------- Other Discription  -------------->
+
+	<div class="modal fade" id="discription" role="dialog">
+	    <div class="modal-dialog discription_dialoge">
+	    	<div class="popup-arrow-top "></div>
+	      	<div class="modal-content discription_content">
+		        <div class="modal-header">
+		          <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		        </div>
+		        <div class="modal-body discription_body">
+
+					<div class="">
+					  <ul class="nav nav-tabs discription_navtabs" role="tablist">
+					    <li class="nav-item discription_navitem">
+					      <a class="nav-link discription_link active" data-toggle="tab" href="#otherdiscription">Other Discription</a>
+					    </li>
+					    <li class="nav-item discription_navitem">
+					      <a class="nav-link discription_link" data-toggle="tab" href="#addon">Add On</a>
+					    </li>
+					  </ul>
+
+					  <!-- Tab panes -->
+					  <div class="tab-content discription_tabcontent">
+					    <div id="otherdiscription" class="tab-pane active">
+					    	<div id="ul-scrollbar">
+					    		<div class="row">
+						    		<div class="col-md-11">							    	
+										  <ul class="discription_ul">
+										  	<li>With Ice</li>
+										  	<li>Adding Butterscoch</li>
+										  	<li>Vanila Flavour</li>
+										  	<li>With nuts</li>
+										  	<li>Without cool</li>
+										  	<li>Three type ice cream</li>
+										  	<li>With Ice</li>
+										  </ul>
+									 </div>
+
+								<div class="col-md-1">
+				                  	<div class="arrow_top">
+				                  		<i class="fas fa-chevron-circle-up"></i>
+				                  	</div>
+				                  	<div class="arrow_bottom">
+				                  		<i class="fas fa-chevron-circle-down"></i>
+				                  	</div>								
+								</div>
+							</div>
+	
+							</div>
+					    	  <div id="newdiscription" class="form-row dis_form">
+								    <div class="col-md-6">
+								      <label for="">New Discription</label>
+								      <input type="text" class="discription_formcntrl white_input_ripple" placeholder="Discription">				
+								  	  <label class="checkbox_show"><i class="far fa-save saveto" data-toggle="tooltip" data-placement="top" title="Save To Feature"></i><input  type="checkbox" checked="checked" data-toggle="tooltip" data-placement="bottom" title="Save To Feature"><span class="discription_checkmark"></span></label>
+
+								    </div>
+								    <div class="col-md-2">
+								      <label for="">Amount</label>
+								      <input type="text" class="discription_formcntrl white_input_ripple" id="" placeholder="00:00">
+								    </div>
+									 <div class="form-group col-md-2" style="margin-bottom: 0;">
+	                                    <div class="input-group bootstrap-timepicker timepicker">
+	                                      <label for="">Time Consume</label>
+	                                      <input type="text" id="schedule_timepicker"> <span class=" input-group-addon endtime_btn"><i class="far fa-clock endtime_icon"></i></span>
+	                                    </div>
+	                                </div>
+								    <div class="col-md-2">
+								    	<button type="button" class="add_btn"> Add</button>
+								    </div>							    
+							  </div>							  
+
+							<div class="dic_iocn_right">
+								<div class="pull-right">
+									<a href="#" class="icon-ok"> Ok</a>
+									<a href="#" class="icon-addnew"> Add New</a>
+									<a href="#" class="icon-clear"> Clear</a>									
+								</div>
+							</div>				      
+					    </div>
+
+					    <div id="addon" class="tab-pane fade">
+					    	<div class="discription_item">
+			                	<div class="item_list_left">
+			                   		<h5>Chikken Burger</h5>
+			                   		<p>Spicy Chichen X 2</p>
+			                  	</div>
+		                 	
+						        <div class="item_amount_right">
+				                    <div class="amont_div">
+				                      <p>Total</p>
+				                      <button class="amount_total">22.00</button>
+				                    </div>
+				                    <div class="addon_div">
+				                      <p>Add On</p>
+				                      <button class="add_on">4.00</button>
+				                    </div>                    
+				                    <div class="amount_div">
+				                      <p>Amont</p>
+				                      <button class="amount_show">18.00</button>
+				                    </div>
+				                </div>
+				            </div>
+
+				           <!--  <div class="addon-tabs_arrow"><i class="fas fa-caret-up faa-float animated-hover touch_arrow"></i></div> -->
+				            <div  id="discription_scrollbar" class="discription_item_list">				            
+			                  <div class="row">
+			                  	<div class="col-md-11">
+			                  		<div class="row">
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Spicy Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                     	 </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 25.00</span>
+					                            <p>Beef Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                      	</div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 49.00</span>
+					                            <p>Grilled Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                    	  </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Spicy Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                     	 </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Chicken Dry</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                     	 </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Spicy Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                  		    </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>  
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Chicken Dry</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                     	 </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Spicy Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                  		    </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div> 
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Chicken Dry</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                     	 </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Spicy Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                  		    </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div> 			                    
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Chicken Dry</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                     	 </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div class="col-md-2">
+					                      <div class="row">
+					                        <div class="product_wrap">
+					                          <div class="Product_item_img"></div>
+					                          <div class="product_subtitile">
+					                            <span>AED 20.00</span>
+					                            <p>Spicy Chicken</p>
+					                            <div class="input-group discription_count">         
+						                        <button class="discription_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+						                        <input type="text" class="discription_input black_input_ripple" value="1">
+						                        <button class="discription_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+					                  		    </div>
+					                          </div>
+					                        </div>
+					                      </div>
+					                    </div> 
+				               		</div>
+				                  </div>
+				                  <div class="col-md-1">
+				                  	<div class="arrow_top">
+				                  		<i class="fas fa-chevron-circle-up"></i>
+				                  	</div>
+				                  	<div class="arrow_bottom">
+				                  		<i class="fas fa-chevron-circle-down"></i>
+				                  	</div>
+				                  </div>
+			             	 </div>
+			                </div>
+
+			                <!-- <div class="addon_arrow_btm"><i class="fas fa-caret-down faa-float animated-hover touch_arrow"></i></div> -->
+
+							<div class="discription_footer">
+								<div class="pull-right">
+									<a href="#" class="icon-ok" style="float: right;"> Ok</a>									
+									<a href="#" class="icon-clear"> Clear</a>									
+								</div>
+							</div>	
+
+					    </div>
+					  </div>
+					</div>
+		        </div>
+			</div>
+	    </div>
+	</div>
+
+	<!--------------- Family Meal  -------------->
+
+	<div class="modal fade" id="familymeal" role="dialog">
+	    <div class="modal-dialog fm_dialoge">
+	    	<div class="popup-arrow-top "></div>
+	      	<div class="modal-content fm_content">
+		        <div class="modal-header fm_header">
+		          <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		         	<div class="col-md-8" style="padding-left: 0;padding-right: 10px;"><h3>Family Meals</h3> </div>
+		         	 <div class="col-md-4" style="padding-left: 5px;padding-right: 0;"><h4>69.00 AED</h4> </div>
+		        </div>
+
+		        <div class="modal-body fm_body">
+		        	<div id="page1" class="">
+		        		<div class="freeaddon_wrap">
+		        			<div class="row">
+			        			<div class="col-md-8">	
+			        			<div class="familymeals_arrow"><i class="fas fa-caret-up faa-float animated-hover familymeals_touch_arrow"></i></div>		        				
+			        				<div id="left_scrollbar">
+			        					<div class="left_section active">
+				        					<h4>Free Add On - 1</h4>			        					
+				        					<div class="row">
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+					        						</div>
+					        					</div>			        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/pepsi.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Pepsi</p>
+						        							<span>17.50</span>
+						        						</div>
+					        						</div>
+					        					</div>				        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/7up.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>7up</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>				        					
+				        					</div>
+			        					</div>			        					
+			        					<div class="left_section">
+				        					<h4>Free Add On - 2</h4>			        					
+				        					<div class="row">
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>				        						
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/pepsi.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Pepsi</p>
+						        							<span>17.50</span>
+						        						</div>
+						        					</div>
+					        					</div>					        									        								        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/7up.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>7up</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>	
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>						        										        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/pepsi.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Pepsi</p>
+						        							<span>17.50</span>
+						        						</div>
+						        					</div>
+					        					</div>					        						
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+					        							<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+					        						</div>
+					        					</div>			        								        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+					        						</div>
+					        					</div>	
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/7up.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>7up</p>
+						        							<span>20.00</span>
+						        						</div>
+					        						</div>
+					        					</div>					        								        					
+				        					</div>
+			        					</div>			        					
+			        					<div class="left_section">
+				        					<h4>Free Add On - 3</h4>			        					
+				        					<div class="row">
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>			        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/pepsi.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Pepsi</p>
+						        							<span>17.50</span>
+						        						</div>
+						        					</div>
+					        					</div>				        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/7up.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>7up</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>				        					
+				        					</div>
+			        					</div>			        					
+			        					<div class="left_section">
+				        					<h4>Free Add On - 4</h4>			        					
+				        					<div class="row">
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/7up.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>7up</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>					        						
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>					        								        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/pepsi.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Pepsi</p>
+						        							<span>17.50</span>
+						        						</div>
+						        					</div>
+					        					</div>				        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>						        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/pepsi.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Pepsi</p>
+						        							<span>17.50</span>
+						        						</div>
+						        					</div>
+					        					</div>				        					
+					        					<div class="col-md-3">
+					        						<div class="addon-boxshadow">
+						        						<div class="item_show">
+						        							<img src="images/mirinda.png">
+						        						</div>
+						        						<div class="item_details">
+						        							<p>Mirinda</p>
+						        							<span>20.00</span>
+						        						</div>
+						        					</div>
+					        					</div>						        							        					
+				        					</div>
+			        					</div>
+
+			        				</div>
+
+			        				<div class="familymeal_arrow_btm"><i class="fas fa-caret-down faa-float animated-hover familymeals_touch_arrow"></i></div>
+
+					        		<div class="Pagination_wrap">
+					        			<ul class="pagination pager">
+										  	<li class="preview_btn"><a href="#">Previous</a></li>
+										  	<li class="next_btn"><a href="#">Next</a></li>
+										</ul>
+					        		</div>
+			        			</div>
+
+			        			<div class="col-md-4" style="padding-left: 0;">
+			        				<div class="familymeals_arrow" style="border-bottom: 0;"><i class="fas fa-caret-up faa-float animated-hover familymeals_touch_arrow"></i></div>
+			        				<div id="rightscrollbar" class="right_section">
+										<table class="table price_listing">
+											  <tr>
+											    <th>Item</th>
+											    <th>Qty</th>
+											    <th>Price</th>
+											  </tr>
+											  <tr class="first">
+											    <td>sup</td>
+											    <td>1</td>
+											    <td>8.00</td>
+											  </tr>
+											  <tr class="second">
+											    <td>mix</td>
+											    <td>2</td>
+											    <td>20.00</td>
+											  </tr>
+											  <tr class="first">
+											    <td>salad</td>
+											    <td>1</td>
+											    <td>10.00</td>
+											  </tr>
+											  <tr class="second">
+											    <td>mix</td>
+											    <td>2</td>
+											    <td>20.00</td>
+											  </tr>									  
+										</table>										
+									</div>
+
+										<div class="familymeal_arrow_btm"><i class="fas fa-caret-down faa-float animated-hover familymeals_touch_arrow"></i></div>			        				
+
+				        				<div class="right_button_wrap">				        					
+				        					<button type="button" class="clear_btn">Clear</button>
+				        					<button type="button" class="ok_btn">Ok</button>
+				        				</div>
+
+								</div>
+			        		</div>
+			        	</div>
+		        	</div>
+		        </div>					
+
+			</div>
+	    </div>
+	</div>
+
+	<!-----------------------product size chart----------------------->
+
+
+	<div id="size_choose"  style="display: none;">
+		<div class="juice_size_wrap">
+			<div class="row">
+				<div class="col-md-4" style="border-right: 1px solid #333;">
+					<div class="juice_size">
+						<h4>Small</h4>
+						<p>20.00 AED</p>
+						<div class="input-group juice_size_count">					
+							<button class="juice_size_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+							<input type="text" class="juicesize_input white_input_ripple" value="1">
+							<button class="juice_size_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+						</div>	
+						<button type="button" class="add_size_btn theam1_background">Add</button>		
+					</div>	
+				</div>	
+				
+				<div class="col-md-4" style="border-right: 1px solid #333;">
+					<div class="juice_size">
+						<h4>Medium</h4>
+						<p>30.00 AED</p>
+						<div class="input-group juice_size_count">					
+							<button class="juice_size_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+							<input type="text" class="juicesize_input white_input_ripple" value="1">
+							<button class="juice_size_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+						</div>	
+						<button type="button" class="add_size_btn theam1_background">Add</button>		
+					</div>	
+				</div>	
+				
+				<div class="col-md-4">
+					<div class="juice_size last">
+						<h4>Large</h4>
+						<p>50.00 AED</p>
+						<div class="input-group juice_size_count">					
+							<button class="juice_size_btn_left" data-dir="dwn"><i class="fas fa-minus"></i></button>
+							<input type="text" class="juicesize_input white_input_ripple" value="1">
+							<button class="juice_size_btn_right" data-dir="up"><i class="fas fa-plus"></i></button>
+						</div>	
+						<button type="button" class="add_size_btn theam1_background">Add</button>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-----------------------Search popup----------------------->
+
+            <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog search-dialog" role="document">
+                <div class="modal-content search-content">
+                  <div class="modal-header">
+                   <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button> 
+                  </div>
+                  <div class="modal-body">
+                  	<div class="search_body">
+                  		<img src="images/search-engine.png">
+	                    <h1>Search Here</h1>
+	                    <p>Please enter an any part of jobs Customer Name, Address, Mobile, Invoice No</p>
+	                    <form class="navbar-form " role="search">
+	                      <div class="form-group">
+	                        <input type="text" class="search_form white_input_ripple" placeholder="Search here...">
+	                      </div>
+	                     </form>
+	                     <div class="search_button_wrp">
+	                      	<button type="button" class="Cancel_btn" data-dismiss="modal">Cancel</button>
+	                      	<button id="okcontinue" type="button" class="okcontinue_btn theam1_background">Okay Continue</button>
+	                   	 </div>
+                  	</div>
+              	</div>
+
+
+                </div>
+              </div>
+            </div>
+
+	        <!-------okey continue popup------->
+
+				<div class="modal fade okcontinue_overlay" id="myModal-okcontinue" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog okcontinue_dialog">
+				    <div class="modal-content okcontinue_content">	
+				    <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>      
+					    <div class="modal-body okcontinue_body">
+			      			<div class="okcontinue_topfield">
+				      			<div class="row">
+				      				<div class="col-md-2">
+				      					<span style="width: 100%;margin-left: 8px;">Waiter Filter</span>									
+				      					<div class="white_input_ripple">
+											<select class="okcontinue_inputfield">
+											  <option value="1">Admin</option>
+											  <option value="2">Admin </option>
+											  <option value="3">Admin </option>
+											  <option value="4">Admin </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<span>From Date</span>
+										<i class="far fa-calendar-alt icone_date"></i>
+										<input type="text" name="" class="okcontinue_inputfield pos_datepicker black_input_ripple" style="padding-left: 30px;">
+									</div>
+									<div class="col-md-2">
+	                                    <div class="inpt-grp">
+	                                      <span>From Time</span>
+	                                      <input type="text" id="from_timepicker"> <span class="searchtime_btn"><i class="far fa-clock"></i></span>
+	                                    </div>
+	                                </div>									
+	                                <div class="col-md-2">
+										<span>To Date</span>
+										<i class="far fa-calendar-alt icone_date"></i>
+										<input type="text" name="" class="okcontinue_inputfield pos_datepicker black_input_ripple" style="padding-left: 30px;">
+									</div>
+									<div class="col-md-2">
+	                                    <div class="inpt-grp">
+	                                      <span>To Time</span>
+	                                      <input type="text" id="to_timepicker"> <span class="searchtime_btn"><i class="far fa-clock"></i></span>
+	                                    </div>
+	                                </div>
+	                                <button type="button" class="searck_submit_btn theam1_background">Submit</button>
+				      			</div>
+			      			</div>
+
+			      			<div class="search_table_arrow"><i class="fas fa-caret-up faa-float animated-hover search_touch_arrow"></i></div>
+			      			<div id="searchtable_scrollbar">
+			      				   <table class="table table-striped">
+									    <thead>
+									        <tr>
+									            <th>S.No</th>
+									            <th>Type</th>
+									            <th>Cust-Type</th>
+									            <th>Mobile</th>
+									            <th>Name</th>
+									            <th>Address</th>
+									            <th>Amount</th>
+									            <th>Date-Time</th>
+									            <th>Invoice No</th> 
+									            <th>Remark</th>
+									            <th>Paid</th>
+									            <th>Waiter</th>
+									            <th>Print</th>
+									            <th>View</th>
+									        </tr>
+									    </thead>
+									            <tr>
+									                <td>1</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>2</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>3</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>4</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>5</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>									            
+									            <tr>
+									                <td>6</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>7</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									    </table>
+			      			</div>
+			      			<div class="search_table_arrow_btm"><i class="fas fa-caret-down faa-float animated-hover search_touch_arrow"></i></div>
+
+						</div>
+				    </div>
+				  </div>
+				</div>
+
+			<!-------------------------------- Invoice Popup---------------------------------->
+
+	            <div class="modal fade" id="invoice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	              <div class="modal-dialog invoice-dialog" role="document">
+	                <div class="modal-content invoice-content">
+	                  <div class="modal-header">
+		                  <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		                  </div>
+		                  <div class="modal-body">
+		                  	<div class="invoice_body">
+		                  		<img src="images/invoice-icon.png">
+			                    <h1>Invoice</h1>
+			                    <p>Please enter an Invoice No</p>
+			                    <form class="navbar-form " role="search">
+			                      <div class="form-group">
+			                        <input type="text" class="search_form white_input_ripple" placeholder="Enter Invoice Number">
+			                      </div>
+			                    </form>
+			                    <div class="invoic_button_wrp">
+			                      	<button type="button" class="Cancel_btn" data-dismiss="modal">Cancel</button>
+			                      	<button type="button" class="invoiceok_btn theam1_background">Ok</button>
+			                    </div>
+		                  	</div>
+		              	</div>
+	                </div>
+	              </div>
+	            </div>
+
+				<!--------------- Split popup -------------->
+
+				<div class="modal fade" id="split" role="dialog">
+				    <div class="modal-dialog split_dialoge">
+				    	<!-- <div class="popup-arrow-top "></div> -->
+				      	<div class="modal-content split_content">
+					        <div class="modal-header split_header">
+					          <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+					        </div>
+					        <div class="modal-body split_body">
+								<div class="splitinvoice_title">Split Invoice : 10039</div>
+									<div class="row">
+										<div class="col-md-5 col-sm-5">
+											<div class="currentinvoice_wrp">
+												<div class="currentinvoice">Current Invoice</div>
+												<div class="split_padd">
+													<div class="split_popup_arrow"><i class="fas fa-caret-up faa-float animated-hover split_touch_arrow"></i></div>
+													<div id="module-left-scrollbar">
+														<div class="split_item">																										
+															<table>
+																  <tr>
+																    <td><p>Orginal Japanese cheesecake</p></td>
+																    <td><p>2</p></td>
+																    <td><p>25.00</p></td>
+																  </tr>
+															</table>
+														</div>
+													</div>
+													<div class="split_popup_arrow"><i class="fas fa-caret-down faa-float animated-hover split_touch_arrow"></i></div>
+												</div>
+												<div class="split_qty">Qty : 01</div>
+												<div class="split_total">Total : 20.00 AED</div>
+											</div>
+										</div>
+										<div class="col-md-2 col-sm-2" style="padding-left: 0;padding-right: 0;">
+											<div class="splitqnty"><label class="ck_box">Split Quantity <input type="checkbox"> <span class="qty_checkmark">
+											</span></label>	</div>									
+											<div class="split_button_wrp">
+												<button type="button" class="splitnext_btn"><i class="fas fa-chevron-right"></i>
+												</button>
+												<button type="button" class="splitnext_btn"><i class="fas fa-chevron-left"></i>
+												</button>
+												<button type="button" class="split_dbl_btn"><i class="fas fa-angle-double-right"></i></i>
+												</button>
+												<button type="button" class="split_dbl_btn"><i class="fas fa-angle-double-right"></i>
+												</button>
+												<button type="button" class="reset_button">Reset</button>
+											</div>
+										</div>
+										<div class="col-md-5 col-sm-5">
+											<div class="newinvoice_wrp">
+												<div class="newinvoice">New Invoice</div>
+												<div class="split_padd">
+													<div class="split_popup_arrow"><i class="fas fa-caret-up faa-float animated-hover split_touch_arrow"></i></div>
+													<div id="module-right-scrollbar">
+														<div class="split_item">																										
+															<table>
+																  <tr>
+																    <td><p>Orginal Japanese cheesecake</p></td>
+																    <td><p>2</p></td>
+																    <td><p>25.00</p></td>
+																  </tr>
+															</table>
+														</div>													
+													</div>
+													<div class="split_popup_arrow"><i class="fas fa-caret-down faa-float animated-hover split_touch_arrow"></i></div>
+												</div>
+												<div class="split_qty">Qty : 01</div>
+												<div class="split_total">Total : 20.00 AED</div>
+											</div>
+										</div>
+									</div>
+								</div>
+		<!-- 						<form class="split_labal_wrap">
+								    <label class="split_labal">Chnage</label><input type="text" name="firstname" class="spli_input white_input_ripple theam1_border">
+								    <label class="split_labal">Cash</label><input type="text" name="firstname" class="spli_input white_input_ripple theam1_border">
+								</form> -->
+								<div class="btnn">
+									<button type="button" class="split_new_btn" data-toggle="modal" data-target="#save">Save & New</button>					        	
+									<button type="button" class="split_saveasnew_btn">Save As New</button>	
+									<button type="button" class="split_cancel_btn" data-dismiss="modal">Close</button>	
+								</div>			        	
+					        </div>
+						</div>
+				    </div>
+				</div>
+
+
+	        <!-------retrive Button popup------->
+
+				<div class="modal fade retrive-overlay" id="retrive" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog retrive-dialog">
+				    <div class="modal-content retrive-content">	
+				    <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>      
+					    <div class="modal-body retrive-body">			  
+
+			      			<div class="retrive_table_arrow"><i class="fas fa-caret-up faa-float animated-hover retrive_touch_arrow"></i></div>
+			      			<div id="retrive_scrollbar">
+			      				   <table class="table table-striped">
+									    <thead>
+									        <tr>
+									            <th>S.No</th>
+									            <th>Type</th>
+									            <th>Cust-Type</th>
+									            <th>Mobile</th>
+									            <th>Name</th>
+									            <th>Address</th>
+									            <th>Amount</th>
+									            <th>Date-Time</th>
+									            <th>Invoice No</th> 
+									            <th>Remark</th>
+									            <th>Paid</th>
+									            <th>Waiter</th>
+									            <th>Print</th>
+									            <th>View</th>
+									        </tr>
+									    </thead>
+									            <tr>
+									                <td>1</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>2</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>3</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>4</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>5</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>									            
+									            <tr>
+									                <td>6</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									            <tr>
+									                <td>7</td>
+									                <td>Dining</td>
+									                <td>0</td>
+									                <td>8129227223</td>
+									                <td>Althaf</td>
+									                <td>Chenoth</td>
+									                <td>12.00</td>
+									                <td>2019-11-04,01:08 PM</td>
+									                <td>10042</td>
+									                <td></td>
+									                <td>Paid By Cash</td>
+									                <td>Rentel</td>
+									                <td><a href=""><img src="images/print-icon.png"></a></td>
+									                <td>Retrive <a href=""><img src="images/retrive-icon.png"></a></td>
+									            </tr>
+									    </table>
+			      			</div>
+			      			<div class="retrive_table_arrow_btm"><i class="fas fa-caret-down faa-float animated-hover retrive_touch_arrow"></i></div>
+
+						</div>
+				    </div>
+				  </div>
+				</div>
+
+			<!-------------------------------- Clear All Popup---------------------------------->
+
+	            <div class="modal fade" id="clearall" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	              <div class="modal-dialog clearall-dialog" role="document">
+	                <div class="modal-content clearall-content">
+	                  <div class="modal-header">
+		                   <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		                  </div>
+		                  <div class="modal-body">
+		                  	<div class="clearall_body">
+		                  		<img src="images/clear-icon.png">
+			                    <h3>Are You Sure To Clear All ?</h3>
+			                    <p>This Option not remove your invoice </p>
+			                    <div class="clearall_btn_wrap">
+			                    	<button type="button" class="clearall_close_btn theam1_background" data-dismiss="modal">Close</button>
+			                    	<button type="button" class="opencash_btn theam1_background">Open Cash</button>
+			                     	<button type="button" class="yesclear_btn">Yes Clear It!</button>                  	
+			                    </div>
+		                  	</div>
+		              	</div>
+	                </div>
+	              </div>
+	            </div>
+
+				<!--------------- Restaurent table popup  -------------->
+
+				<div class="modal fade" id="tabledisplay" role="dialog">
+				    <div class="modal-dialog restaurant_table_dialoge">
+				    	<div class="popup-arrow-top "></div>
+				      	<div class="modal-content restaurant_table_content">
+					        <div class="modal-header">
+					          <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+					        </div>
+					        <div class="modal-body restaurant_table_body">
+								<div class="">
+									<ul class="nav nav-tabs table_navtabs" role="tablist">
+									    <li class="nav-item table_navitem">
+									      <a class="nav-link table_link active" data-toggle="tab" href="#groundfloor">Ground Floor</a>
+									    </li>
+									    <li class="nav-item table_navitem">
+									      <a class="nav-link table_link" data-toggle="tab" href="#firstfloor">First Floor</a>
+									    </li>									    
+									    <li class="nav-item table_navitem">
+									      <a class="nav-link table_link" data-toggle="tab" href="#thiredfloor">Thired Floor</a>
+									    </li>
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content table_tabcontent">
+									    <div id="groundfloor" class="tab-pane active">
+									    	<div class="order_box_sec">
+												<div class="ord_box ord_box_height" data-table_id="1" data-table_name="F1">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<img class="pending" src="images/pending.GIF">
+													<div class="pop_tb_name">
+														<div class="contents_pops">						
+															<p class="Customer_name">Althaf</p>
+															<p class="total_amount">80:00</p>
+															<p class="d_time">1:20 PM</p>
+															<p class="table_name">F1</p>
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box ord_box_height disabled_box border" data-table_id="2" data-table_name="F2">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<img class="pending" src="images/pending.GIF">
+													<div class="pop_tb_name">
+														<div class="contents_pops">						
+															<p class="Customer_name disabled_box">Althaf</p>
+															<p class="total_amount disabled_box">80:00</p>
+															<p class="d_time disabled_box">1:20 PM</p>
+															<p class="table_name disabled_box">F2</p>
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="3" data-table_name="F3">
+													<i class="far fa-check-circle tick_icon"></i>
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F3</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="4" data-table_name="F4">
+													<i class="far fa-times-circle close_icon"></i>
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F4</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="5" data-table_name="F5">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F5</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="6" data-table_name="F6">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F6</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="8" data-table_name="F8">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F8</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="9" data-table_name="F9">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F9</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="10" data-table_name="F10">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F10</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="11" data-table_name="F1A">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F1A</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="12" data-table_name="F2A">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F2A</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="14" data-table_name="F4A">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F4A</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="15" data-table_name="F5A">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F5A</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="16" data-table_name="F6A">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F6A</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="17" data-table_name="F7A">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F7A</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="18" data-table_name="F8A">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F8A</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="19" data-table_name="F9A">
+														<img class="chair_img" src="images/chair.png" alt="">
+														<div class="overlay"></div>
+														<div class="pop_tb_name">
+															<div class="contents_pops_tb">
+																<div class="admin_tit"><!-- Admin --></div>
+												   				<p class="d_inline">F9A</p>
+												   				<!--<p class="d_inline">3:53</p>
+												   				<p class="admit">1039.5</p> -->
+												   			</div>
+														</div>
+												</div>	  				      
+										    </div>
+										</div>
+									    <div id="firstfloor" class="tab-pane fade">
+											<div class="order_box_sec">
+												<div class="ord_box" data-table_id="1" data-table_name="F1">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F1</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="2" data-table_name="F2">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F2</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="3" data-table_name="F3">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F3</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="4" data-table_name="F4">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F4</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="5" data-table_name="F5">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F5</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="6" data-table_name="F6">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F6</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="8" data-table_name="F8">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F8</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="9" data-table_name="F9">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F9</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="10" data-table_name="F10">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F10</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+								            </div>
+									    </div>
+									    <div id="thiredfloor" class="tab-pane fade">
+											<div class="order_box_sec">
+												<div class="ord_box" data-table_id="1" data-table_name="F1">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F1</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="2" data-table_name="F2">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F2</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="3" data-table_name="F3">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F3</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="4" data-table_name="F4">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F4</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="5" data-table_name="F5">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F5</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+												
+												<div class="ord_box" data-table_id="6" data-table_name="F6">
+													<img class="chair_img" src="images/chair.png" alt="">
+													<div class="overlay"></div>
+													<div class="pop_tb_name">
+														<div class="contents_pops_tb">
+															<div class="admin_tit"><!-- Admin --></div>
+															<p class="d_inline">F6</p>
+															<!--<p class="d_inline">3:53</p>
+															<p class="admit">1039.5</p> -->
+														</div>
+													</div>
+												</div>
+								            </div>
+									    </div>
+
+
+									</div>
+								</div>
+					        </div>
+						</div>
+				    </div>
+				</div>
+
+			<!---------------------- call Notification popup ------------------------>
+
+				<div class="wrapper">
+				  <button class="btn btn--chat js-chat "><i class="fas fa-phone-alt"></i></button>
+				  <div class="chatbox js-chatbox">
+				    <!-- <form class="chatbox__form js-chatbox__form">
+				      <textarea class="chatbox__input" placeholder="Type your message" rows="7" cols="40" required></textarea>
+				      <button class="chatbox__submit"><i class="fab fa-telegram-plane"></i> Send message</button>
+				    </form> -->
+				    <div class="call_log">
+				    	<h5>Caller ID Log</h5>	
+				    	<label id="switch" class="switch show_switch"><input type="checkbox"><span class="slider round show_slider"></span></label>			    	
+				    	<div class="call_notification_wrp"> 		
+
+				    		<div class="show_notification">
+								<label class="ckbox_show"><p>Always Show While Calling</p>
+								  <input type="radio" checked="checked" name="radio">
+								  <span class="notification_checkmark"></span>
+								</label>							
+								<label class="ckbox_show"><p>Notify While Calling</p>
+								  <input type="radio" name="radio">
+								  <span class="notification_checkmark"></span>
+								</label>					
+								<label class="ckbox_show"><p>Never Show Calling</p>
+								  <input type="radio" name="radio">
+								  <span class="notification_checkmark"></span>
+								</label>
+								<button type="button" class="apple_btn">Apply Settings</button>
+				    		</div>
+
+					    	<div class="call_notification active">
+					    		<h4>Waiting !</h4>
+					    		<p>Unknown Address</p>
+					    		<p>Call Time</p>
+					    		<span>Recent Order</span>
+					    		<span>Amount 0.00</span>
+					    		<img class="arrow_left faa-horizontal animated-hover" src="images/left-arrow-chevron.png">
+					    		<img class="arrow_right faa-horizontal animated-hover" src="images/right-arrow-chevron.png">
+					    	</div>					    	
+					    	<div class="call_notification">
+					    		<h4>Waiting 2!</h4>
+					    		<p>Lorem Ipsum</p>
+					    		<p>10:35 Am</p>
+					    		<span>Recent Order</span>
+					    		<span>Amount 0.00</span>
+					    		<img class="arrow_left faa-horizontal animated-hover" src="images/left-arrow-chevron.png">
+					    		<img class="arrow_right faa-horizontal animated-hover" src="images/right-arrow-chevron.png">
+					    	</div>	
+
+					    	<div class="callhistory">
+					    		<h4>Call History, Recent 5</h4>
+					    		<p>9847457812</p>
+					    		<p>Althaf</p>
+					    		<p>7:20 AM</p>
+					    		<p>24:00</p>
+					    		<p>4:00</p>
+					    	</div>
+					    	<button type="button" class="call_notification_btn">saveeee</button>
+				   		</div>
+
+				    </div>
+				  </div>
+				</div>
+
+			<!-------------------------------- Delete Popup---------------------------------->
+
+	            <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	              <div class="modal-dialog delete-dialog" role="document">
+	                <div class="modal-content delete-content">
+	                  <div class="modal-header">
+		                  <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		                  </div>
+		                  <div class="modal-body">
+		                  	<div class="delete_body">
+		                  		<img src="images/detele.png">
+			                    <h1>Delete Conformation</h1>
+			                    <p>Are you sure to Void/Delete</p>
+			                    <form class="navbar-form ">
+			                      <div class="form-group">
+			                      	<label class="popup_labal">Admin Password</label>
+			                        <input type="text" class="search_form white_input_ripple" placeholder="Enter Password">     	
+			                        <label class="popup_labal">Delete Comment</label>
+			                        <textarea rows="2" cols="50" name="comment" form="usrform" class="delete_cmt white_input_ripple"></textarea>
+			                      </div>
+			                    </form>
+			                      <div class="delete_button_wrp">
+			                    	  <button type="button" class="Cancel_btn" data-dismiss="modal">Cancel</button>
+			                    	  <button type="button" class="deactive_btn">Deactive</button>
+			                    	  <button type="button" class="delete_btn">Delete</button>
+			                	  </div>
+			                   
+		                  	</div>
+		              	</div>
+	                </div>
+	              </div>
+	            </div>
+
+
+			<!-------------------------------- Print Popup---------------------------------->
+
+	            <div class="modal fade" id="print" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	              <div class="modal-dialog print-dialog" role="document">
+	                <div class="modal-content print-content">
+	                  <div class="modal-header">
+		                  <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		                  </div>
+		                  <div class="modal-body">
+		                  	<div class="print_body">
+		                  		<img src="images/icon_printer.png">
+			                    <h1>Print Invoice</h1>			                    
+			                    <form class="navbar-form ">
+			                      <div class="form-group">
+			                      	<label class="popup_labal">Invoice Number</label>
+			                        <input type="text" class="search_form white_input_ripple" placeholder="Enter Invoice Number">     	
+			                      </div>
+			                    </form>
+			                      <div class="print_button_wrp">
+			                    	  <button type="button" class="Cancel_btn" data-dismiss="modal">Cancel</button>
+			                    	  <button type="button" class="print-open_btn">Print & Open</button>
+			                    	  <button type="button" class="print_btn">Print</button>
+			                	  </div>
+			                    
+		                  	</div>
+		              	</div>
+	                </div>
+	              </div>
+	            </div>
+
+			<!-------------------------------- Discount Popup---------------------------------->
+
+	            <div class="modal fade" id="discount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	              <div class="modal-dialog discount-dialog" role="document">
+	                <div class="modal-content discount-content">
+	                  <div class="modal-header">
+		                  <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		                  </div>
+		                  <div class="modal-body">
+		                  	<div class="discount_body">
+		                  		<img src="images/discount.png">
+			                    <h1>Choose a discount %</h1>
+			                    <div class="sub_form">
+			                    	<div class="row">
+										<table class="table discount_table">
+											<thead>
+												<tr>
+													<th>Sub Total</th>
+													<th>Vat 12%</th>
+													<th>Vat 20%</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>$ 145.00</td>
+													<td>$ 10.00</td>
+													<td>$ 15.00</td>
+												</tr>
+											</tbody>
+										</table>
+			                   		</div>
+			                    </div>		
+			                   	<div class="discount_card">		                    
+									<ul>
+									  	<li>5%</li>
+									  	<li>10%</li>
+									  	<li>15%</li>
+									  	<li>20%</li>
+									  	<li>25%</li>
+									</ul>	
+			                    </div>		                    
+			                    <div class="discount_field">
+			                    	<div class="discount_amount">
+			                    		<label class="popup_labal" for="">Amount</label>
+								   	 	<input type="text" class="discription_formcntrl white_input_ripple">
+								   	</div>				                    	
+								   	<div class="discount_percentage">
+			                    		<label class="popup_labal" for="">Percentage</label>
+								   	 	<input type="text" class="discription_formcntrl white_input_ripple">
+								   	</div>	
+			                    </div>
+			                    <div class="discount_grandtotal">
+			                    	<label class="popup_labal" for="">Grand Total</label>
+								   	<input type="text" class="discription_formcntrl white_input_ripple"><img class="faa-horizontal animated-hover gt_edit_icon" email_address="" src="images/edit.png">
+			                    </div>
+		                    	<div class="discount_button_wrp">
+		                    	  	<button type="button" class="discount_cancel_btn" data-dismiss="modal">Cancel</button>
+		                    	 	<button type="button" class="discountok_btn">Ok</button>
+		                	  	</div>
+		                  	</div>
+		              	</div>
+	                </div>
+	              </div>
+	            </div>
+
+			<!-------------------------------- Price enquiry Popup---------------------------------->
+
+	            <div class="modal fade" id="price_enquiry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	              <div class="modal-dialog price_enquiry-dialog" role="document">
+	                <div class="modal-content price_enquiry-content">
+	                  <div class="modal-header">
+		                  <button type="button" class="close close_popup_btn" data-dismiss="modal"><img src="images/popup_close-btn.png"></button>
+		                  </div>
+		                  <div class="modal-body">
+		                  	<div class="price_enquiry_body">
+		                  		<img src="images/priceenguiry.png">
+			                    <h1>Price Enquiry</h1>	
+			    			    <div class="form-group">
+			                      	<label class="popup_labal">Barcode / Search Product</label>
+			                        <input type="text" class="search_form white_input_ripple">     
+			                        <label class="popup_labal">Item Name</label>
+			                        <input type="text" class="search_form white_input_ripple">   
+			                        <label class="popup_labal">Price</label>
+			                        <input type="text" class="search_form white_input_ripple">     	
+			                     </div>
+			                     <div class="row">
+			                     	<div class="col-md-8">
+			                     		<label class="popup_labal">View Stoke</label>
+			                     		<div class="viewstoke_wrp row">			                     			
+					                    	<div class="col-md-6">			
+					                    		<label class="popup_labal" style="color: #fff;">Choose Depot</label>		                    			                    		
+						                        <select class="viewstoke_selection">						                           
+												  <option value="1">depot 1</option>
+												  <option value="2">depot 2</option>
+												  <option value="3">depot 3</option>
+												  <option value="4">depot 4</option>
+												</select>
+
+					                	  	</div>  
+					                	  	<div class="col-md-6">
+					                    		<label class="popup_labal" style="color: #fff;">Stoke</label> 
+						                        <input type="text" class="search_form white_input_ripple" placeholder=""> 
+					                	  	</div>	
+					                	</div> 
+				                	</div> 	
+			                	  	<div class="col-md-4" style="padding-left: 0;">
+			                	  		<label class="popup_labal">Cost</label>
+			                	  		<div class="cost_field">		                    			
+				                        	<input type="text" class="cost_form white_input_ripple"> 
+				                        </div>
+			                	  	</div>
+			                	</div>
+		                  	</div>
+		              	</div>
+	                </div>
+	              </div>
+	            </div>
+
+
+	        <!--------------------------Quick Add ----------------------------->
+
+			<!--<div class="quckadd_box">	
+	        	<form class="">
+				    <label class="quick_labal">Barcode</label>
+				    <input type="text" name="" class="quick_input white_input_ripple theam1_border" placeholder="Barcode">				    
+				    <label class="quick_labal">Item Name</label>
+				    <input type="text" name="" class="quick_input white_input_ripple theam1_border" placeholder="Product Name">			    
+				    <label class="quick_labal">Item Model</label>
+				    <input type="text" name="" class="quick_input white_input_ripple theam1_border" placeholder="Model Name">
+				    <div class="row">
+					    <div class="col-md-2" style="padding-right: 0px;">
+					    	<label class="quick_labal2">Unit</label>				    
+							<div class="white_input_ripple">
+								<select class="quick_input2 theam1_border">
+								  <option value="1">Nos</option>
+								  <option value="2">Nos </option>
+								  <option value="3">Nos </option>
+								  <option value="4">Nos </option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2" style="padding-right: 0px;">
+							<label class="quick_labal">Stoke</label>
+							<input type="text" name="" class="quick_input2 white_input_ripple theam1_border" placeholder="Stoke">					
+						</div>
+						<div class="col-md-2" style="padding-right: 0px;">
+							<label class="quick_labal">Cost</label>
+							<input type="text" name="" class="quick_input2 white_input_ripple theam1_border" placeholder="Cost">					
+						</div>
+						<div class="col-md-2" style="padding-right: 0px;">
+							<label class="quick_labal">Sales</label>
+							<input type="text" name="" class="quick_input2 white_input_ripple theam1_border" placeholder="Sales">
+						</div>
+						<div class="col-md-2" style="padding-right: 0px;">					
+							<label class="quick_labal">Qty</label>
+							<input type="text" name="" class="quick_input2 white_input_ripple theam1_border" placeholder="Qty">
+						</div>
+						<button type="button" class="quickadd_btn">Add <i class="fas fa-plus"></i></button>
+					</div>
+				</form>
+	        </div> -->				
+
+			<!---------------------- Keyboard ------------------------>
+
+			<!-- <div id="keyboard"></div> -->
+
+</body>
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/all.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="js/jkeyboard.js"></script>
+<script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script>
+<!-- <script src="js/tippy.js"></script> -->
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+<script src="js/enjoyhint.js"></script>
+
+
+<!------ Number Count ----------->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.count').prop('disabled', true);
+		$(document).on('click', '.plus', function() {
+			$('.count').val(parseInt($('.count').val()) + 1);
+		}
+		);
+		$(document).on('click',
+		'.minus',
+		function() {
+			$('.count').val(parseInt($('.count').val()) - 1);
+			if ($('.count').val()==0) {
+				$('.count').val(1);
+			}
+		}
+		);
+	}
+	);
+</script>
+
+<!------ accordion ----------->
+
+<script >$(document).ready(function() {
+
+  var bodyEl = $('body'),
+    accordionDT = $('.accordion').find('dt'),
+    accordionDD = accordionDT.next('dd'),
+    parentHeight = accordionDD.height(),
+    childHeight = accordionDD.children('.content').outerHeight(true),
+    newHeight = parentHeight > 0 ? 0 : childHeight,
+    accordionPanel = $('.accordion-panel'),
+    buttonsWrapper = accordionPanel.find('.buttons-wrapper'),
+    openBtn = accordionPanel.find('.open-btn'),
+    closeBtn = accordionPanel.find('.close-btn');
+
+  bodyEl.on('click', function(argument) {
+    var totalItems = $('.accordion').children('dt').length;
+    var totalItemsOpen = $('.accordion').children('dt.is-open').length;
+
+    if (totalItems == totalItemsOpen) {
+      openBtn.addClass('hidden');
+      closeBtn.removeClass('hidden');
+      buttonsWrapper.addClass('is-open');
+      //accordionDD.addClass('isActive');
+      //accordionDD.css('overflow','visible');
+      setTimeout(function(){accordionDD.css('overflow','visible');},500)
+    } else {
+      openBtn.removeClass('hidden');
+      closeBtn.addClass('hidden');
+      buttonsWrapper.removeClass('is-open');
+      //accordionDD.removeClass('isActive');
+
+      accordionDD.css('overflow','hidden');
+    }
+  });
+
+	  function openAll() {
+
+	    openBtn.on('click', function(argument) {
+
+	      accordionDD.each(function(argument) {
+	        var eachNewHeight = $(this).children('.content').outerHeight(true);
+	        $(this).css({
+	          height: eachNewHeight
+	        });
+	      });
+	      accordionDT.addClass('is-open');
+	    });
+	  }
+
+	  function closeAll() {
+
+	    closeBtn.on('click', function(argument) {
+	      accordionDD.css({
+	        height: 0
+	      });
+	      accordionDT.removeClass('is-open');
+	    });
+	  }
+
+	  function openCloseItem() {
+	    accordionDT.on('click', function() {
+
+	      var el = $(this),
+	        target = el.next('dd'),
+	        parentHeight = target.height(),
+	        childHeight = target.children('.content').outerHeight(true),
+	        newHeight = parentHeight > 0 ? 0 : childHeight;
+
+	      // animate to new height
+	      target.css({
+	        height: newHeight
+	      });
+
+	      // remove existing classes & add class to clicked target
+	      if (!el.hasClass('is-open')) {
+	        el.addClass('is-open');
+	      }
+
+	      // if we are on clicked target then remove the class
+	      else {
+	        el.removeClass('is-open');
+	      }
+	    });
+	  }
+
+	  openAll();
+	  closeAll();
+	  openCloseItem();
+	});
+	//# sourceURL=pen.js
+</script>
+
+<!------ Datepicker ----------->
+
+<script>
+     $(document).ready(function() {
+        console.log($('.pos_datepicker'));
+        $('.pos_datepicker').datepicker({format:'dd/mm/yyyy'});
+    });
+</script>
+
+<!------ label ----------->
+
+ <script type="text/javascript">
+ 	
+	$(document).ready(function(){
+
+	  $('.input_popup').focus(function(){
+	    $(this).parent().find(".label-txt").addClass('label-active');
+	  });
+
+	  $(".input_popup").focusout(function(){
+	    if ($(this).val() == '') {
+	      $(this).parent().find(".label-txt").removeClass('label-active');
+	    };
+	  });
+
+	});
+
+ </script>
+
+<!------ tab active ----------->
+
+<script type="text/javascript">
+	
+	$(function() {
+		var $a = $(".tabs li");
+		$a.click(function() {
+			$a.removeClass("active");
+			$(this).addClass("active");
+		});
+	});
+
+</script>
+
+<!------ Denomination popup ----------->
+
+	<script type="text/javascript">
+	//set button id on click to hide first modal
+	$("#signin").on( "click", function() {
+	        $('#myModal1').modal('hide');  
+	});
+	//trigger next modal
+	$("#signin").on( "click", function() {
+	        $('#myModal2').modal('show');  
+	});
+</script>
+
+<!------ Grand Total popup ----------->
+
+<script type="text/javascript">
+	//set button id on click to hide first modal
+	$("#grandtotal").on( "click", function() {
+	        $('#myModal2').modal('hide');  
+	});
+	//trigger next modal
+	$("#grandtotal").on( "click", function() {
+	        $('#myModal3').modal('show');  
+	});
+</script> 
+
+<!------ okcontinue popup ----------->
+
+<script type="text/javascript">
+	//set button id on click to hide first modal
+	$("#okcontinue").on( "click", function() {
+	        $('#myModal-okcontinue').modal('hide');  
+	});
+	//trigger next modal
+	$("#okcontinue").on( "click", function() {
+	        $('#myModal-okcontinue').modal('show');  
+	});
+</script> 
+
+<!--------- juice selection s/m/l-------->
+
+<script type="text/javascript">
+	
+	$(document).on('click', '.juice_size_count button', function () {    
+		var btn = $(this),
+			oldValue = btn.closest('.juice_size_count').find('input').val().trim(),
+			newVal = 0;
+		
+		if (btn.attr('data-dir') == 'up') {
+			newVal = parseInt(oldValue) + 1;
+		} else {
+			if (oldValue > 1) {
+				newVal = parseInt(oldValue) - 1;
+			} else {
+				newVal = 1;
+			}
+		}
+		btn.closest('.juice_size_count').find('input').val(newVal);
+	});	
+
+</script>
+
+<!---------Product List - Number Count- main page-------->
+
+<script type="text/javascript">
+	
+	$(document).on('click', '.Productlist_numbercount button', function () {    
+		var btn = $(this),
+			oldValue = btn.closest('.Productlist_numbercount').find('input').val().trim(),
+			newVal = 0;
+		
+		if (btn.attr('data-dir') == 'up') {
+			newVal = parseInt(oldValue) + 1;
+		} else {
+			if (oldValue > 1) {
+				newVal = parseInt(oldValue) - 1;
+			} else {
+				newVal = 1;
+			}
+		}
+		btn.closest('.Productlist_numbercount').find('input').val(newVal);
+	});	
+
+</script>
+
+<!---------Other Discription Number Counting-------->
+
+<script type="text/javascript">
+	
+	$(document).on('click', '.discription_count button', function () {    
+		var btn = $(this),
+			oldValue = btn.closest('.discription_count').find('input').val().trim(),
+			newVal = 0;
+		
+		if (btn.attr('data-dir') == 'up') {
+			newVal = parseInt(oldValue) + 1;
+		} else {
+			if (oldValue > 1) {
+				newVal = parseInt(oldValue) - 1;
+			} else {
+				newVal = 1;
+			}
+		}
+		btn.closest('.discription_count').find('input').val(newVal);
+	});	
+
+</script>
+
+<!---------choose Denomination Counter-------->
+
+<script type="text/javascript">
+	
+	$(document).on('click', '.number-spinner button', function () {    
+		var btn = $(this),
+			oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+			newVal = 0;
+		
+		if (btn.attr('data-dir') == 'up') {
+			newVal = parseInt(oldValue) + 1;
+		} else {
+			if (oldValue > 1) {
+				newVal = parseInt(oldValue) - 1;
+			} else {
+				newVal = 1;
+			}
+		}
+		btn.closest('.number-spinner').find('input').val(newVal);
+	});	
+
+</script>
+
+<!---------Number Paad-------->
+
+<script>
+    $('#number').jkeyboard({
+      layout: "numbers_only",
+      input: $('#number_field')
+    });
+
+
+    $(".input_box").focus(function() {
+        $('#number').jkeyboard("setInput", this);
+    });
+
+
+</script>
+
+<script>
+    $('#keyboard').jkeyboard({
+    });
+</script>
+
+<!-------------Active Bottons--------------->
+
+<script type="text/javascript">
+
+
+		$('.discription_ul li').click(function(){
+			// $('.discription_ul li').removeClass('active');
+			$(this).toggleClass('active');		
+	})			
+		$('.seat_ul li').click(function(){
+			// $('.discription_ul li').removeClass('active');
+			$(this).toggleClass('active');		
+	})			
+		$('.split_item').click(function(){
+			// $('.discription_ul li').removeClass('active');
+			$(this).toggleClass('active');		
+	})			
+		$('.discount_card ul li').click(function(){
+			 $('.order_box_sec').removeClass('active');
+			$(this).addClass('active');		
+	})			
+		$('.ord_box').click(function(){
+			 $('.ord_box').removeClass('active');
+			$(this).addClass('active');		
+	})	
+
+</script>
+
+<!------------toggle btn-------->
+
+<script type="text/javascript">$(document).ready(function(){
+	
+	$('#toggle_btn').click(function(){
+		$(this).toggleClass('open');
+		$('#buttons_wrap').toggle()
+	})
+	
+		$('.next_btn').click(function(){
+			// $('.next_btn').removeClass('active');
+			// $(this).toggleClass('active');	
+			// $('.left_section').toggle()
+			if($('.left_section.active').next('.left_section').length>0)
+			{
+				let thiss = $('.left_section.active').next('.left_section');
+				$('.left_section').removeClass('active');
+				thiss.addClass('active');
+				if($('.left_section.active').next('.left_section').length==0)
+				{
+					$('.next_btn').addClass('disabled');
+				}
+				else
+				{
+					$('.next_btn').removeClass('disabled');
+				}
+
+				if($('.left_section.active').prev('.left_section').length==0)
+				{
+					$('.preview_btn').addClass('disabled');
+				}
+				else
+				{
+					$('.preview_btn').removeClass('disabled');
+				}
+			}	
+	})		
+
+		$('.preview_btn').click(function(){
+			// $('.next_btn').removeClass('active');
+			// $(this).toggleClass('active');	
+			// $('.left_section').toggle()
+			if($('.left_section.active').prev('.left_section').length>0)
+			{
+				let thiss = $('.left_section.active').prev('.left_section');
+				$('.left_section').removeClass('active');
+				thiss.addClass('active');
+				if($('.left_section.active').prev('.left_section').length==0)
+				{
+					$('.preview_btn').addClass('disabled');
+				}
+				else
+				{
+					$('.preview_btn').removeClass('disabled');
+				}
+
+				if($('.left_section.active').next('.left_section').length==0)
+				{
+					$('.next_btn').addClass('disabled');
+				}
+				else
+				{
+					$('.next_btn').removeClass('disabled');
+				}
+			}	
+	})
+});
+
+</script>
+
+<!------------Tooltip-------->
+
+<script>
+	$(document).ready(function(){
+	  $('[data-toggle="tooltip"]').tooltip();   
+	});
+</script>
+
+<!------------Time Picker-------->
+
+<script>
+  $(document).ready(function() {
+    console.log($('.schedule_timepicker'));
+        $('#schedule_timepicker').timepicker();
+        // $('#schedule_timepicker2').timepicker();
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+    console.log($('.from_timepicker'));
+        $('#from_timepicker').timepicker();
+        // $('#schedule_timepicker2').timepicker();
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+    console.log($('.to_timepicker'));
+        $('#to_timepicker').timepicker();
+        // $('#schedule_timepicker2').timepicker();
+    });
+</script>
+
+<!------------Size Chart-------->
+
+<script type="text/javascript">
+	
+let template = document.getElementById('size_choose');
+	// Since we're targeting many different elements, we can pass its `innerHTML`
+	// as a string
+	tippy('.size-chart', {trigger: 'click',interactive: true,
+	   	  theme: 'light-border',content: template.innerHTML});	
+	
+	template = document.getElementById('grandtotalpopup');
+	// Since we're targeting many different elements, we can pass its `innerHTML`
+	// as a string
+	tippy('.popupcontent', {trigger: 'click',interactive: true,
+	   	  theme: 'light-border',content: template.innerHTML});	
+
+	template = document.getElementById('denominatio_popup');
+	// Since we're targeting many different elements, we can pass its `innerHTML`
+	// as a string
+	tippy('.denocontent', {trigger: 'click',interactive: true,
+	   	  theme: 'light-border',content: template.innerHTML});
+
+</script>
+
+<!------------Call Notification-------->
+
+<script type="text/javascript">
+	
+	const btn = document.querySelector(".js-chat");
+	const chatBox = document.querySelector(".js-chatbox");
+	const form = document.querySelector(".js-chatbox__form");
+
+	btn.addEventListener("click", () => {
+	  chatBox.classList.toggle("chatbox--is-visible");
+
+	  if (chatBox.classList.contains("chatbox--is-visible")) {
+	    btn.innerHTML = '<i class="fas fa-times"></i>';
+	  } else {
+	    btn.innerHTML = '<i class="fas fa-phone-alt">';
+	  }
+	});
+
+	// form.addEventListener("submit", e => {
+	//   e.preventDefault();
+	// });
+
+	
+    $(document).on('click','.arrow_right',function(){
+		// $('.next_btn').removeClass('active');
+		// $(this).toggleClass('active');	
+		// $('.left_section').toggle()
+		if($('.call_notification.active').next('.call_notification').length>0)
+		{
+			let thiss = $('.call_notification.active').next('.call_notification');
+			$('.call_notification').removeClass('active');
+			thiss.addClass('active');
+			if($('.call_notification.active').next('.call_notification').length==0)
+			{
+				$('.arrow_right').addClass('disabled');
+			}
+			else
+			{
+				$('.arrow_right').removeClass('disabled');
+			}
+
+			if($('.call_notification.active').prev('.call_notification').length==0)
+			{
+				$('.arrow_left').addClass('disabled');
+			}
+			else
+			{
+				$('.arrow_left').removeClass('disabled');
+			}
+		}	
+	})		
+
+		$('.arrow_left').click(function(){
+			// $('.next_btn').removeClass('active');
+			// $(this).toggleClass('active');	
+			// $('.left_section').toggle()
+			if($('.call_notification.active').prev('.call_notification').length>0)
+			{
+				let thiss = $('.call_notification.active').prev('.call_notification');
+				$('.call_notification').removeClass('active');
+				thiss.addClass('active');
+				if($('.call_notification.active').prev('.call_notification').length==0)
+				{
+					$('.arrow_left').addClass('disabled');
+				}
+				else
+				{
+					$('.arrow_left').removeClass('disabled');
+				}
+
+				if($('.call_notification.active').next('.call_notification').length==0)
+				{
+					$('.arrow_right').addClass('disabled');
+				}
+				else
+				{
+					$('.arrow_right').removeClass('disabled');
+				}
+			}	
+	})
+
+
+</script>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		$("#switch input[type='checkbox']").change(function() {
+
+			 $(".show_notification").toggleClass("active"); 
+		});
+	});	
+
+</script>
+
+<!------------field wavws-------->
+
+<!-- <script type="text/javascript">
+	
+	For a regular waves
+	// Waves.attach('.btn', ['waves-effect']);	
+
+</script>  -->
+
+<!---------- Enjoy Hint ---------->
+
+
+<!-- <script type="text/javascript">
+		
+	//initialize instance
+	var enjoyhint_instance = new EnjoyHint({});
+
+//simple config.
+//Only one step - highlighting(with description) "New" button
+//hide EnjoyHint after a click on the button.
+var enjoyhint_script_steps = [
+    {
+        "click .vertical-tabs": 'Click a category from list.'
+    },
+    {
+        "next #fastmoving": 'Choose the product.'
+    },    
+    {
+        "next .search-btn": 'Choose One Item.'
+    }
+
+];
+
+//set script config
+enjoyhint_instance.set(enjoyhint_script_steps);
+
+//run Enjoyhint script
+enjoyhint_instance.run();
+
+</script> -->
+
+<script type="text/javascript">
+	
+$(".dropdown-menu li").click(function(){
+  var selText = $(this).text();
+  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+});
+	
+</script>
+
+
+
+</html>
+
+
+
+

@@ -3,6 +3,8 @@ using CefSharp.WinForms;
 using System.Data;
 using System.Windows.Forms;
 using System;
+using System.Web;
+using System.Web.Services;
 
 namespace POS
 {
@@ -54,7 +56,7 @@ namespace POS
                     }
                 }
             }*/
-            if (Cbrowser.Address == @"file:///D:/dll/POS/signin.html")
+            if (Cbrowser.Address == @"file:///C:/Users/userpc/source/repos/POS/POS/signin.html")
             {
                 string logcheck = @"(function Log(){
 	                               var arr1=[$('#txtemail').val(),
@@ -87,7 +89,7 @@ namespace POS
                         }
                         else
                         {
-                               // MessageBox.Show(@"Couldn't Load Requested Resource......!");
+                            // MessageBox.Show(@"Couldn't Load Requested Resource......!");
                         }
                     }
                     else
@@ -107,12 +109,23 @@ namespace POS
             url:'http://develop.aipsoft.in/common/sync_table/login_action',
             success: function(response) {
             responseobj = JSON.parse(response);
-            console.log(responseobj);
-            alert(responseobj);           
+            console.log(response);
+            alert(response);
+            var a=response;
+            $.ajax({
+                    data:{'request':'a'},
+                    method: 'POST',
+                    url:'Methods.cs/ReadResponse',
+                    success:function(success){
+                    alert('Success');
+                    },
+                    error:function(error){
+                    alert('Failed To Load WebMethod');
+                   }
+             });          
             responseobj = 1;
             return response.toString();
-            },
-            
+            },            
             error: function(error) {
  
             },
@@ -143,6 +156,12 @@ namespace POS
             {
 
             }
+        }
+        [WebMethod]
+        public static string ReadResponse(string request)
+        {
+            string a = request;
+            return a;
         }
         #endregion
     }
