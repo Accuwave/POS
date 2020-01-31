@@ -16,10 +16,11 @@ namespace POS
             Cbrowser.BrowserSettings.WebSecurity = CefState.Disabled;
             Cbrowser.BrowserSettings.FileAccessFromFileUrls = CefState.Enabled;
             Cbrowser.BrowserSettings.UniversalAccessFromFileUrls = CefState.Enabled;
+           
         }
         #region Variables
         public ChromiumWebBrowser Cbrowser;
-        private readonly Methods _objMeth = new Methods();
+        private readonly Methods __objMeth = new Methods();
         public int comid = 0;
         #endregion
 
@@ -29,17 +30,18 @@ namespace POS
             this.WindowState = FormWindowState.Maximized;
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
-            Cbrowser = new ChromiumWebBrowser(@"file:///C:/Users/userpc/source/repos/POS/POS/signin.html");
+            Cbrowser = new ChromiumWebBrowser(@"file:///D:/dll/POS/signin.html");
             this.panel1.Controls.Add(Cbrowser);
             
             textBox1.Text = Cbrowser.Address;
+           
         }
 
         private void Onload(object sender, LoadingStateChangedEventArgs args)
         {
             this.Invoke(new MethodInvoker(() =>
              {
-                 _objMeth.Login(Cbrowser);                 
+                 __objMeth.Login(Cbrowser);                 
              }));            
         }
         #endregion

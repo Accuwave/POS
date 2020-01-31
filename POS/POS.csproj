@@ -124,13 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
-    <Content Include="NewData.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="NewData_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>NewData.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CefSharp.WinForms">
@@ -138,6 +131,9 @@
     </PackageReference>
     <PackageReference Include="MySql.Data">
       <Version>8.0.18</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
