@@ -30,6 +30,7 @@ namespace POS
             this.WindowState = FormWindowState.Maximized;
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
+            //Cbrowser = new ChromiumWebBrowser(@"file:///D:\POSDATA\DOTNETPOS\dotnet_pos.html");
             Cbrowser = new ChromiumWebBrowser(@"file:///D:/dll/POS/signin.html");
             this.panel1.Controls.Add(Cbrowser);
             
